@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: #fae5df;
+  background-color: #232946;
   text-overflow: ellipsis;
 }
 main {
@@ -18,11 +18,14 @@ main {
 
 a {
   text-decoration: none;
-  color: #141850;
+  color: #fffffe;
+}
+
+header {
 }
 
 a:hover {
-  color: #ed7966;
+  color: #b8c1ec;
 }
 
 nav li a {
@@ -40,23 +43,43 @@ th {
   text-align: center;
 }
 
+main {
+  border-radius: 1.5em;
+}
+
 table {
   border-collapse: collapse;
   width: 100%;
 }
 
+p,
+article,
+h2,
+h3 {
+  color: #232946;
+}
+
 input {
+  border-color: #121629;
+  border-radius: 2px;
+  border-width: 1px;
   font-size: 18px;
 }
-li > textarea {
+li > textarea,
+li > select {
+  border-color: #121629;
+  border-radius: 2px;
   font-size: 14px;
 }
+
 li > ::placeholder {
   font-size: 14px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 400;
 }
 textarea {
+  border-color: #121629;
+  border-radius: 2px;
   font-size: 18px;
 }
 ::placeholder {
@@ -70,7 +93,7 @@ option {
   font-size: 14px;
 }
 
-.flex {
+ul.flex {
   display: flex;
   list-style-type: none;
   align-items: center;
@@ -90,18 +113,20 @@ option {
 .menu {
   display: flex;
   height: 104px;
-  background-color: #fafafa;
   align-items: center;
   margin: 0 auto;
-  box-shadow: 0px 4px 15px -15px rgb(65 65 65);
+  box-shadow: 0px 4px 15px -15px rgb(20 20 20);
 }
 
 .container {
   margin-right: auto;
   margin-left: auto;
   max-width: 1170px;
-  background-color: #ffffff;
   scrollbar-width: none;
+}
+
+main {
+  background-color: #fffffe;
 }
 
 .biography__footer img {
@@ -113,9 +138,10 @@ option {
   margin-bottom: 1em;
 }
 
-.header {
+h1.header {
   text-align: left;
   margin-bottom: 1em;
+  color: #232946;
 }
 
 .footer {
@@ -125,6 +151,10 @@ option {
 
 .image {
   max-height: 256px;
+  border-style: solid;
+  border-color: #121629;
+  border-radius: 5px;
+  border-width: 2px;
 }
 
 .banner {
@@ -157,6 +187,11 @@ table.center {
   max-width: 96%;
   display: block;
   justify-content: space-between;
+  color: #232946;
+}
+
+main a {
+  color: #232946;
 }
 
 .hobbies__menu li {
@@ -178,7 +213,9 @@ table.center {
 }
 
 .col {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   float: left;
   width: 20%;
   margin: 0.5em;
@@ -213,6 +250,12 @@ table.center {
 .submit {
   width: 96px;
   height: 48px;
+  background-color: #eebbc3;
+  cursor: pointer;
+  border-radius: 3px;
+  border-style: none;
+  padding: 10px 5px;
+  font-size: 16px;
 }
 
 .test {
