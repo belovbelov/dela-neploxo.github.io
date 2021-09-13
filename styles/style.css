@@ -267,6 +267,9 @@ main a {
 }
 
 @media only screen and (max-width: 960px) {
+  .container {
+    max-width: 640px;
+  }
   ul.flex {
     font-size: 16px;
   }
