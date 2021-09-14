@@ -207,9 +207,10 @@ main a {
   margin-bottom: 1em;
 }
 
-.row {
+.gallery {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .col {
@@ -217,8 +218,8 @@ main a {
   flex-direction: column;
   align-items: center;
   float: left;
-  width: 20%;
-  margin: 0.5em;
+  max-width: 18%;
+  padding: 0.5em;
 }
 .col > img {
   width: 100%;
