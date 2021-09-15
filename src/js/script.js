@@ -17,6 +17,27 @@ function showImages() {
   }
 }
 
+function showHobbies() {
+  let args = [
+    { title: "ASD", content: "test" },
+    { title: "Hobby2", content: "test2" },
+    { title: "Hoob1", content: "testtestesr" },
+  ];
+  let parent = document.getElementsByClassName("interests__content")[0];
+  args.forEach((element) => {
+    let hobbyCntainer = document.createElement("div");
+    hobbyCntainer.className = "interests__element";
+    let header = document.createElement("h3");
+    header.textContent = element["title"];
+    header.className = "element__header";
+    let content = document.createElement("article");
+    content.textContent = element["content"];
+    hobbyCntainer.appendChild(header);
+    hobbyCntainer.appendChild(content);
+    parent.appendChild(hobbyCntainer);
+  });
+}
+
 function wordCounter(text) {
   text = text.split(" ");
   let wordCount = 0;
