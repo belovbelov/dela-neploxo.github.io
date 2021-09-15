@@ -28,11 +28,18 @@
               </div>
               <a href="about.html">Обо мне</a>
             </li>
-            <li onmouseover="onMouseOverImage(this)" onmouseout="onMouseOutImage(this)">
+            <li onmouseover="onMouseOverImage(this)" onmouseout="onMouseOutImage(this)" onclick="showDropdown()" class="dropdown">
               <div class="wrapper">
                 <img src="img/logo.jpg" alt=""class="element__image">
               </div>
-              <a href="interests.html">Мои интересы</a>
+              <a class="dropdownbtn"> Мои интересы</a>
+              <ul id="hobbiesDropdown" class="dropdown-content">
+                <li><a href="interests.html#hobbies">Хобби</a></li>
+                <li><a href="interests.html#lang">Языки</a></li>
+                <li><a href="interests.html#frameworks">Фреймфорки</a></li>
+                <li><a href="interests.html#movies">Фильмы</a></li>
+                <li><a href="interests.html#jokes">Анекдоты</a></li>
+              </ul>
             </li>
             <li onmouseover="onMouseOverImage(this)" onmouseout="onMouseOutImage(this)">
               <div class="wrapper">

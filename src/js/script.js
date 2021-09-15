@@ -17,12 +17,7 @@ function showImages() {
   }
 }
 
-function showHobbies() {
-  let args = [
-    { title: "ASD", content: "test" },
-    { title: "Hobby2", content: "test2" },
-    { title: "Hoob1", content: "testtestesr" },
-  ];
+function showHobbies(...args) {
   let parent = document.getElementsByClassName("interests__content")[0];
   args.forEach((element) => {
     let hobbyCntainer = document.createElement("div");
@@ -36,6 +31,14 @@ function showHobbies() {
     hobbyCntainer.appendChild(content);
     parent.appendChild(hobbyCntainer);
   });
+}
+
+function initHobbyObjects() {
+  showHobbies(
+    { title: "ASD", content: "test" },
+    { title: "Hobby2", content: "test2" },
+    { title: "Hoob1", content: "testtestesr" }
+  );
 }
 
 function wordCounter(text) {
@@ -72,3 +75,19 @@ function onMouseOutImage(tag) {
   let image = tag.firstElementChild.firstElementChild;
   image.src = "img/logo.jpg";
 }
+
+function showDropdown() {
+  document.getElementById("hobbiesDropdown").classList.toggle("show");
+}
+
+window.onclick = function (event) {
+  if (!event.target.matches(".dropdownbtn")) {
+    let dropdowns = document.getElementsByClassName("dropdown-content");
+    for (let i = 0; i < dropdowns.length; i++) {
+      let openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains("show")) {
+        openDropdown.classList.remove("show");
+      }
+    }
+  }
+};
