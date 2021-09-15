@@ -1,5 +1,14 @@
 const photos = Array(15).fill("img/1.jpg");
 const titles = Array(15).fill("Photo");
+const week = {
+  1: "Понедельник",
+  2: "Вторник",
+  3: "Среда",
+  4: "Четверг",
+  5: "Пятница",
+  6: "Суббота",
+  7: "Воскресение",
+};
 
 function showImages() {
   for (let i = 0; i < photos.length; i++) {
@@ -91,3 +100,17 @@ window.onclick = function (event) {
     }
   }
 };
+
+function getTime() {
+  let today = new Date();
+  let date = today.getFullYear().toString();
+  date = today.getMonth() + 1 + "." + date.slice(-2);
+  let time = today.getHours().toString();
+  let dateTime = time + "." + date.toString() + " " + week[today.getDay()];
+  let text = document.getElementById("time");
+  text.textContent = dateTime;
+}
+
+let intervalId = window.setInterval(function () {
+  getTime();
+}, 1000);

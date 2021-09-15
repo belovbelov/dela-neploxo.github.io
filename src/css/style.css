@@ -301,6 +301,17 @@ main a {
   display: block;
 }
 
+.dropdown {
+  cursor: pointer;
+}
+
+#time {
+  position: absolute;
+  top: 42px;
+  right: 48px;
+  color: #eebbc3;
+}
+
 @media only screen and (max-width: 960px) {
   .container {
     max-width: 640px;
