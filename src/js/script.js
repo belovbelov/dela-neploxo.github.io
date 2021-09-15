@@ -62,3 +62,13 @@ function validateName(tag) {
     tag.setCustomValidity("НЕТ");
   }
 }
+
+function onMouseOverImage(tag) {
+  let image = tag.firstElementChild.firstElementChild;
+  image.src = "img/2.jpg";
+}
+
+function onMouseOutImage(tag) {
+  let image = tag.firstElementChild.firstElementChild;
+  image.src = "img/logo.jpg";
+}
