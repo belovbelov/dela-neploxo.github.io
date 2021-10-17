@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="js/script.js"></script>
+    <title>Belov - Hobbies</title>
+  </head>
+  <body onload="initHobbyObjects()">
+    <div class="container">
+      <header>
+        <nav class="menu">
+          <div class="wrapper" style="display: flex">
+            <img src="img/logo.jpg" alt="" class="navbar__logo" />
+          </div>
+          <ul class="flex">
+            <li
+              onmouseover="onMouseOverImage(this)"
+              onmouseout="onMouseOutImage(this)"
+            >
+              <div class="wrapper">
+                <img src="img/logo.jpg" alt="" class="element__image" />
+              </div>
+              <a href="index.html">Главная</a>
+            </li>
+            <li
+              onmouseover="onMouseOverImage(this)"
+              onmouseout="onMouseOutImage(this)"
+            >
+              <div class="wrapper">
+                <img src="img/logo.jpg" alt="" class="element__image" />
+              </div>
+              <a href="about.html">Обо мне</a>
+            </li>
+            <li
+              onmouseover="onMouseOverImage(this)"
+              onmouseout="onMouseOutImage(this)"
+              onclick="showDropdown()"
+              class="dropdown"
+            >
+              <div class="wrapper">
+                <img src="img/logo.jpg" alt="" class="element__image" />
+              </div>
+              <a class="dropdownbtn"> Мои интересы</a>
+              <ul id="hobbiesDropdown" class="dropdown-content">
+                <li><a href="interests.html#hobbies">Хобби</a></li>
+                <li><a href="interests.html#lang">Языки</a></li>
+                <li><a href="interests.html#frameworks">Фреймфорки</a></li>
+                <li><a href="interests.html#movies">Фильмы</a></li>
+                <li><a href="interests.html#jokes">Анекдоты</a></li>
+              </ul>
+            </li>
+            <li
+              onmouseover="onMouseOverImage(this)"
+              onmouseout="onMouseOutImage(this)"
+            >
+              <div class="wrapper">
+                <img src="img/logo.jpg" alt="" class="element__image" />
+              </div>
+              <a href="study.html">Учеба</a>
+            </li>
+            <li
+              onmouseover="onMouseOverImage(this)"
+              onmouseout="onMouseOutImage(this)"
+            >
+              <div class="wrapper">
+                <img src="img/logo.jpg" alt="" class="element__image" />
+              </div>
+              <a href="photos.html">Фото альбом</a>
+            </li>
+            <li
+              onmouseover="onMouseOverImage(this)"
+              onmouseout="onMouseOutImage(this)"
+            >
+              <div class="wrapper">
+                <img src="img/logo.jpg" alt="" class="element__image" />
+              </div>
+              <a href="contact.html">Контакты</a>
+            </li>
+            <li
+              onmouseover="onMouseOverImage(this)"
+              onmouseout="onMouseOutImage(this)"
+            >
+              <div class="wrapper">
+                <img src="img/logo.jpg" alt="" class="element__image" />
+              </div>
+              <a href="test.html">Тест по дисциплине</a>
+            </li>
+          </ul>
+        </nav>
+        <div id="time"></div>
+      </header>
+      <main>
+        <h1 class="header">Мои интересы</h1>
+        <div class="container interests">
+          <div class="interests__header">
+            <img src="img/hobby-money.png" class="banner" alt="" />
+            <ul class="hobbies__menu">
+              <li><a href="#hobbies">Мои хобби</a></li>
+              <li><a href="#lang">Мои любимые языки программирования</a></li>
+              <li><a href="#frameworks">Мои любимые фреймфорки</a></li>
+              <li><a href="#movies">Мои любимые фильмы</a></li>
+              <li><a href="#jokes">Мои любимые анекдоты</a></li>
+            </ul>
+          </div>
+          <div class="interests__content">
+            <div id="hobbies" class="interests__element">
+              <h3 class="element__header">Мои Хобби</h3>
+              <article>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
+                eos voluptas officia enim quam magni atque voluptatibus quisquam
+                eum dolore, eveniet consequuntur dolorem sunt ratione amet neque
+                harum ipsam cumque?
+              </article>
+            </div>
+            <div id="lang" class="interests__element">
+              <h3 class="element__header">
+                Мои любимые языки программирования
+              </h3>
+              <article>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corporis, voluptatum numquam? Distinctio recusandae neque
+                aspernatur magnam totam quo ab ipsam id minus tempore reiciendis
+                error, fuga nisi facere repellendus aliquam?
+              </article>
+            </div>
+            <div id="frameworks" class="interests__element">
+              <h3 class="element__header">Мои любимые фреймфорки</h3>
+              <article>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
+                sint laborum quos cum accusantium vel doloribus est sed aliquam
+                illum quam officia harum ut, molestias doloremque nulla debitis
+                delectus. Error?
+              </article>
+            </div>
+            <div id="movies" class="interests__element">
+              <h3 class="element__header">Мои любимые фильмы</h3>
+              <article>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Deleniti modi reprehenderit, harum non reiciendis atque nesciunt
+                quod soluta numquam deserunt suscipit recusandae nulla maiores
+                quisquam minima aliquam unde in error.
+              </article>
+            </div>
+            <div id="jokes" class="interests__element">
+              <h3 class="element__header">Мои любимые анекдоты</h3>
+              <article>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Commodi doloremque, laborum voluptatum nulla eligendi magnam.
+                Odit at dolorem exercitationem! Fuga neque praesentium itaque
+                cupiditate, hic ullam cumque at quasi dolores?
+              </article>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

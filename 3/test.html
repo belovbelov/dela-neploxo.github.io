@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="js/script.js"></script>
+    <title>Belov - Test</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <nav class="menu">
+          <div class="wrapper" style="display: flex">
+            <img src="img/logo.jpg" alt="" class="navbar__logo" />
+          </div>
+          <ul class="flex">
+            <li
+              onmouseover="onMouseOverImage(this)"
+              onmouseout="onMouseOutImage(this)"
+            >
+              <div class="wrapper">
+                <img src="img/logo.jpg" alt="" class="element__image" />
+              </div>
+              <a href="index.html">Главная</a>
+            </li>
+            <li
+              onmouseover="onMouseOverImage(this)"
+              onmouseout="onMouseOutImage(this)"
+            >
+              <div class="wrapper">
+                <img src="img/logo.jpg" alt="" class="element__image" />
+              </div>
+              <a href="about.html">Обо мне</a>
+            </li>
+            <li
+              onmouseover="onMouseOverImage(this)"
+              onmouseout="onMouseOutImage(this)"
+              onclick="showDropdown()"
+              class="dropdown"
+            >
+              <div class="wrapper">
+                <img src="img/logo.jpg" alt="" class="element__image" />
+              </div>
+              <a class="dropdownbtn"> Мои интересы</a>
+              <ul id="hobbiesDropdown" class="dropdown-content">
+                <li><a href="interests.html#hobbies">Хобби</a></li>
+                <li><a href="interests.html#lang">Языки</a></li>
+                <li><a href="interests.html#frameworks">Фреймфорки</a></li>
+                <li><a href="interests.html#movies">Фильмы</a></li>
+                <li><a href="interests.html#jokes">Анекдоты</a></li>
+              </ul>
+            </li>
+            <li
+              onmouseover="onMouseOverImage(this)"
+              onmouseout="onMouseOutImage(this)"
+            >
+              <div class="wrapper">
+                <img src="img/logo.jpg" alt="" class="element__image" />
+              </div>
+              <a href="study.html">Учеба</a>
+            </li>
+            <li
+              onmouseover="onMouseOverImage(this)"
+              onmouseout="onMouseOutImage(this)"
+            >
+              <div class="wrapper">
+                <img src="img/logo.jpg" alt="" class="element__image" />
+              </div>
+              <a href="photos.html">Фото альбом</a>
+            </li>
+            <li
+              onmouseover="onMouseOverImage(this)"
+              onmouseout="onMouseOutImage(this)"
+            >
+              <div class="wrapper">
+                <img src="img/logo.jpg" alt="" class="element__image" />
+              </div>
+              <a href="contact.html">Контакты</a>
+            </li>
+            <li
+              onmouseover="onMouseOverImage(this)"
+              onmouseout="onMouseOutImage(this)"
+            >
+              <div class="wrapper">
+                <img src="img/logo.jpg" alt="" class="element__image" />
+              </div>
+              <a href="test.html">Тест по дисциплине</a>
+            </li>
+          </ul>
+        </nav>
+        <div id="time"></div>
+      </header>
+      <main>
+        <h1 class="header">Тест по ОБЖ</h1>
+        <div class="container test">
+          <form action="" class="test__form">
+            <ol>
+              <li class="test__question">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quibusdam animi quis repudiandae minima voluptas, odit quia
+                  adipisci, sunt maiores quas consectetur quos perspiciatis
+                  doloribus error tenetur numquam nesciunt delectus alias.
+                </p>
+                <br />
+                <textarea
+                  name=""
+                  id=""
+                  cols="50"
+                  rows="2"
+                  placeholder="Ваш ответ *"
+                  onchange="validateTest(this)"
+                ></textarea>
+              </li>
+              <li class="test__question">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quibusdam animi quis repudiandae minima voluptas, odit quia
+                  adipisci, sunt maiores quas consectetur quos perspiciatis
+                  doloribus error tenetur numquam nesciunt delectus alias.
+                </p>
+                <br />
+                <input type="radio" id="awnser1" name="age" value="30" />
+                <label for="awnser1">0 - 30</label><br />
+                <input type="radio" id="awnser2" name="age" value="60" />
+                <label for="awnser2">31 - 60</label><br />
+                <input type="radio" id="awnser3" name="age" value="100" />
+                <label for="awnser3">61 - 100</label>
+              </li>
+              <li class="test__question">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quibusdam animi quis repudiandae minima voluptas, odit quia
+                  adipisci, sunt maiores quas consectetur quos perspiciatis
+                  doloribus error tenetur numquam nesciunt delectus alias.
+                </p>
+                <br />
+                <select name="" id="">
+                  <option value="">123</option>
+                  <option value="">222</option>
+                </select>
+              </li>
+            </ol>
+            <input type="submit" value="Отправить" class="submit" />
+          </form>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
