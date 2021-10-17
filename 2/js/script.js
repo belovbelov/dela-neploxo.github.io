@@ -1,14 +1,5 @@
 const photos = Array(15).fill("img/1.jpg");
 const titles = Array(15).fill("Photo");
-const week = {
-  1: "Понедельник",
-  2: "Вторник",
-  3: "Среда",
-  4: "Четверг",
-  5: "Пятница",
-  6: "Суббота",
-  7: "Воскресение",
-};
 
 function showImages() {
   for (let i = 0; i < photos.length; i++) {
@@ -26,7 +17,12 @@ function showImages() {
   }
 }
 
-function showHobbies(...args) {
+function showHobbies() {
+  let args = [
+    { title: "ASD", content: "test" },
+    { title: "Hobby2", content: "test2" },
+    { title: "Hoob1", content: "testtestesr" },
+  ];
   let parent = document.getElementsByClassName("interests__content")[0];
   args.forEach((element) => {
     let hobbyCntainer = document.createElement("div");
@@ -40,14 +36,6 @@ function showHobbies(...args) {
     hobbyCntainer.appendChild(content);
     parent.appendChild(hobbyCntainer);
   });
-}
-
-function initHobbyObjects() {
-  showHobbies(
-    { title: "ASD", content: "test" },
-    { title: "Hobby2", content: "test2" },
-    { title: "Hoob1", content: "testtestesr" }
-  );
 }
 
 function wordCounter(text) {
@@ -74,43 +62,3 @@ function validateName(tag) {
     tag.setCustomValidity("НЕТ");
   }
 }
-
-function onMouseOverImage(tag) {
-  let image = tag.firstElementChild.firstElementChild;
-  image.src = "img/2.jpg";
-}
-
-function onMouseOutImage(tag) {
-  let image = tag.firstElementChild.firstElementChild;
-  image.src = "img/logo.jpg";
-}
-
-function showDropdown() {
-  document.getElementById("hobbiesDropdown").classList.toggle("show");
-}
-
-window.onclick = function (event) {
-  if (!event.target.matches(".dropdownbtn")) {
-    let dropdowns = document.getElementsByClassName("dropdown-content");
-    for (let i = 0; i < dropdowns.length; i++) {
-      let openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains("show")) {
-        openDropdown.classList.remove("show");
-      }
-    }
-  }
-};
-
-function getTime() {
-  let today = new Date();
-  let date = today.getFullYear().toString();
-  date = today.getMonth() + 1 + "." + date.slice(-2);
-  let time = today.getHours().toString();
-  let dateTime = time + "." + date.toString() + " " + week[today.getDay()];
-  let text = document.getElementById("time");
-  text.textContent = dateTime;
-}
-
-let intervalId = window.setInterval(function () {
-  getTime();
-}, 1000);
