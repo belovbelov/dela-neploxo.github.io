@@ -10,92 +10,132 @@
   </head>
   <body>
     <div class="container">
-      <header>
-        <nav class="menu">
-          <div class="wrapper" style="display: flex">
+      <header class="site-header">
+        <nav class="site-header__navbar">
+          <div class="site-header__logo">
             <img src="img/logo.jpg" alt="" class="navbar__logo" />
           </div>
-          <ul class="flex">
-            <li>
-              <a href="index.html">Главная</a>
+          <ul class="menu site-header__menu">
+            <li class="menu__item">
+              <a class="menu__link site-header__link" href="index.html"
+                >Главная</a
+              >
             </li>
-            <li>
-              <a href="about.html">Обо мне</a>
+            <li class="menu__item">
+              <a class="menu__link site-header__link" href="about.html"
+                >Обо мне</a
+              >
             </li>
-            <li>
-              <a href="interests.html">Мои интересы</a>
+            <li class="menu__item">
+              <a class="menu__link site-header__link" href="interests.html"
+                >Мои интересы</a
+              >
             </li>
-            <li>
-              <a href="study.html">Учеба</a>
+            <li class="menu__item">
+              <a class="menu__link site-header__link" href="study.html"
+                >Учеба</a
+              >
             </li>
-            <li>
-              <a href="photos.html">Фото альбом</a>
+            <li class="menu__item">
+              <a class="menu__link site-header__link" href="photos.html"
+                >Фото альбом</a
+              >
             </li>
-            <li>
-              <a href="contact.html">Контакты</a>
+            <li class="menu__item">
+              <a class="menu__link site-header__link" href="contact.html"
+                >Контакты</a
+              >
             </li>
-            <li>
-              <a href="test.html">Тест по дисциплине</a>
+            <li class="menu__item">
+              <a class="menu__link site-header__link" href="test.html"
+                >Тест по дисциплине</a
+              >
             </li>
           </ul>
         </nav>
       </header>
-      <main>
-        <h1 class="header">Напишите мне на почту</h1>
-        <div class="container contact">
-          <form
-            action="mailto:itoha32@gmail.com"
-            method="POST"
-            class="contact__form"
-          >
-            <input
-              type="text"
-              placeholder="Имя и Фамилия*"
-              id="name"
-              required
-              onchange="validateName(this)"
-            />
-            <!-- <input
-              type="text"
-              placeholder="Фамилия *"
-              id="last_name"
-              required
-            /> -->
-            <input
-              type="email"
-              placeholder="Электронная почта *"
-              id="email"
-              required
-            />
-            <input
-              type="tel"
-              placeholder="8 888 888 8888"
-              id="phone"
-              required
-              minlength="9"
-              maxlength="11"
-              pattern="+[0-9]{1}[0-9]{3}[0-9]{3}[0-9]{4}"
-            />
-            <div class="genders">
-              <p>Выберите пол:</p>
-              <input type="radio" id="male_gender" name="gender" required />
-              <label for="male_gender">Мужской</label>
-              <input type="radio" id="female_gender" name="gender" required />
-              <label for="female_gender">Женский</label>
+      <main class="site-main">
+        <div class="site-main__content-wrapper">
+          <article class="site-main__content">
+            <h1 class="content__header">Напишите мне на почту</h1>
+            <div class="content__body">
+              <div class="contact-form">
+                <div class="container contact-form__wrapper">
+                  <form
+                    action="mailto:itoha32@gmail.com"
+                    method="POST"
+                    class="contact-form__form"
+                  >
+                    <input
+                      class="contact-form__field"
+                      type="text"
+                      placeholder="Имя и Фамилия*"
+                      id="name"
+                      required
+                      onchange="validateName(this)"
+                    />
+                    <input
+                      class="contact-form__field"
+                      type="email"
+                      placeholder="Электронная почта *"
+                      id="email"
+                      required
+                    />
+                    <input
+                      class="contact-form__field"
+                      type="tel"
+                      placeholder="8 888 888 8888"
+                      id="phone"
+                      required
+                      minlength="9"
+                      maxlength="11"
+                      pattern="+[0-9]{1}[0-9]{3}[0-9]{3}[0-9]{4}"
+                    />
+                    <div class="contact-form__field">
+                      <p>Выберите пол:</p>
+                      <input
+                        type="radio"
+                        id="male_gender"
+                        name="gender"
+                        required
+                      />
+                      <label for="male_gender">Мужской</label>
+                      <input
+                        type="radio"
+                        id="female_gender"
+                        name="gender"
+                        required
+                      />
+                      <label for="female_gender">Женский</label>
+                    </div>
+                    <textarea
+                      class="contact-form__field"
+                      name="message"
+                      id=""
+                      cols="30"
+                      rows="5"
+                      placeholder="Ваше сообщение *"
+                      required
+                    ></textarea>
+                    <div class="contact-form__buttons">
+                      <input
+                        type="submit"
+                        value="Отправить"
+                        class="submit"
+                        required
+                      />
+                      <input
+                        type="reset"
+                        value="Сбросить"
+                        class="submit"
+                        required
+                      />
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
-            <textarea
-              name="message"
-              id=""
-              cols="30"
-              rows="5"
-              placeholder="Ваше сообщение *"
-              required
-            ></textarea>
-            <div class="contact__footer">
-              <input type="submit" value="Отправить" class="submit" required />
-              <input type="reset" value="Сбросить" class="submit" required />
-            </div>
-          </form>
+          </article>
         </div>
       </main>
     </div>

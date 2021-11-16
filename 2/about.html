@@ -10,53 +10,51 @@
   </head>
   <body>
     <div class="container">
-      <header>
-        <nav class="menu">
-          <div class="wrapper" style="display: flex">
+      <header class="site-header">
+        <nav class="site-header__navbar">
+          <div class="site-header__logo">
             <img src="img/logo.jpg" alt="" class="navbar__logo" />
           </div>
-          <ul class="flex">
-            <li>
-              <a href="index.html">Главная</a>
+          <ul class="menu site-header__menu">
+            <li class="menu__item">
+              <a class="menu__link site-header__link" href="index.html">Главная</a>
             </li>
-            <li>
-              <a href="about.html">Обо мне</a>
+            <li class="menu__item">
+              <a class="menu__link site-header__link" href="about.html">Обо мне</a>
             </li>
-            <li>
-              <a href="interests.html">Мои интересы</a>
+            <li class="menu__item">
+              <a class="menu__link site-header__link" href="interests.html">Мои интересы</a>
             </li>
-            <li>
-              <a href="study.html">Учеба</a>
+            <li class="menu__item">
+              <a class="menu__link site-header__link" href="study.html">Учеба</a>
             </li>
-            <li>
-              <a href="photos.html">Фото альбом</a>
+            <li class="menu__item">
+              <a class="menu__link site-header__link" href="photos.html">Фото альбом</a>
             </li>
-            <li>
-              <a href="contact.html">Контакты</a>
+            <li class="menu__item">
+              <a class="menu__link site-header__link" href="contact.html">Контакты</a>
             </li>
-            <li>
-              <a href="test.html">Тест по дисциплине</a>
+            <li class="menu__item">
+              <a class="menu__link site-header__link" href="test.html">Тест по дисциплине</a>
             </li>
           </ul>
         </nav>
       </header>
-      <main>
-        <h1 class="header">Автобиография</h1>
-        <div class="container biography">
-          <div class="header biography__header"></div>
-          <article>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+      <main class="site-main">
+        <div class="site-main__content-wrapper">
+          <article class="site-main__content">
+            <h1 class="content__header">Автобиография</h1>
+            <div class="content__body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                <img class="content__image" src="img/bioraphy image.jpg" />
+                <img class="content__image" src="img/hdmPmBaE2yU.jpg" />
           </article>
-          <div class="footer biography__footer">
-            <img class="image" src="img/bioraphy image.jpg" />
-            <img class="image" src="img/hdmPmBaE2yU.jpg" />
-          </div>
         </div>
       </main>
     </div>

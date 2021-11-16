@@ -10,51 +10,65 @@
   </head>
   <body>
     <div class="container">
-      <header>
-        <nav class="menu">
-          <div class="wrapper" style="display: flex">
+      <header class="site-header">
+        <nav class="site-header__navbar">
+          <div class="site-header__logo">
             <img src="img/logo.jpg" alt="" class="navbar__logo" />
           </div>
-          <ul class="flex">
-            <li>
-              <a href="index.html">Главная</a>
+          <ul class="menu site-header__menu">
+            <li class="menu__item">
+              <a class="menu__link site-header__link" href="index.html"
+                >Главная</a
+              >
             </li>
-            <li>
-              <a href="about.html">Обо мне</a>
+            <li class="menu__item">
+              <a class="menu__link site-header__link" href="about.html"
+                >Обо мне</a
+              >
             </li>
-            <li>
-              <a href="interests.html">Мои интересы</a>
+            <li class="menu__item">
+              <a class="menu__link site-header__link" href="interests.html"
+                >Мои интересы</a
+              >
             </li>
-            <li>
-              <a href="study.html">Учеба</a>
+            <li class="menu__item">
+              <a class="menu__link site-header__link" href="study.html"
+                >Учеба</a
+              >
             </li>
-            <li>
-              <a href="photos.html">Фото альбом</a>
+            <li class="menu__item">
+              <a class="menu__link site-header__link" href="photos.html"
+                >Фото альбом</a
+              >
             </li>
-            <li>
-              <a href="contact.html">Контакты</a>
+            <li class="menu__item">
+              <a class="menu__link site-header__link" href="contact.html"
+                >Контакты</a
+              >
             </li>
-            <li>
-              <a href="test.html">Тест по дисциплине</a>
+            <li class="menu__item">
+              <a class="menu__link site-header__link" href="test.html"
+                >Тест по дисциплине</a
+              >
             </li>
           </ul>
         </nav>
       </header>
-      <main>
-        <h1 class="header">Учеба</h1>
-        <div class="container">
-          <div class="header">
-            <h2>Севастопольский Государственный Университет</h2>
-            <h3>
-              Институт информационных технологий и управления в технических
-              системах
-            </h3>
-          </div>
-          <div class="content">
+      <main class="site-main">
+        <div class="site-main__content-wrapper">
+          <article class="site-main__content">
+            <h1 class="content__header">Учеба</h1>
+            <div class="content__body">
+              <h2>Севастопольский Государственный Университет</h2>
+              <h3>
+                Институт информационных технологий и управления в технических
+                системах
+              </h3>
+            </div>
             <table class="center">
               <tbody>
                 <tr>
-                  <td colspan="100%" style="text-align: center">
+                  <td colspan="100%" style="text-align: ">
                     ПЛАН УЧЕБНОГО ПРОЦЕССА
                   </td>
                 </tr>
@@ -195,8 +209,7 @@
                 </tr>
               </tbody>
             </table>
-          </div>
-          <div class="footer"></div>
+          </article>
         </div>
       </main>
     </div>

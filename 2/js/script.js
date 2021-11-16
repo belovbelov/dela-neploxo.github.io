@@ -7,11 +7,11 @@ function showImages() {
     div.className = "col";
     let image = document.createElement("img");
     image.src = photos[i];
-    image.className = "image";
+    image.className = "content__image";
     let imageName = document.createElement("p");
     imageName.textContent = titles[i] + " " + (i + 1).toString();
     document
-      .getElementsByClassName("gallery")[0]
+      .getElementsByClassName("image-gallery")[0]
       .appendChild(div)
       .append(image, imageName);
   }
@@ -23,13 +23,13 @@ function showHobbies() {
     { title: "Hobby2", content: "test2" },
     { title: "Hoob1", content: "testtestesr" },
   ];
-  let parent = document.getElementsByClassName("interests__content")[0];
+  let parent = document.getElementsByClassName("content__body")[0];
   args.forEach((element) => {
     let hobbyCntainer = document.createElement("div");
-    hobbyCntainer.className = "interests__element";
+    hobbyCntainer.className = "content__body";
     let header = document.createElement("h3");
     header.textContent = element["title"];
-    header.className = "element__header";
+    header.className = "content__header";
     let content = document.createElement("article");
     content.textContent = element["content"];
     hobbyCntainer.appendChild(header);
@@ -39,14 +39,7 @@ function showHobbies() {
 }
 
 function wordCounter(text) {
-  text = text.split(" ");
-  let wordCount = 0;
-  for (let i = 0; i < text.length; i++) {
-    if (text[i] !== " ") {
-      wordCount++;
-    }
-  }
-  return wordCount;
+  return text.split(" ").length;
 }
 
 function validateTest(tag) {
@@ -58,7 +51,7 @@ function validateTest(tag) {
 
 function validateName(tag) {
   let words = wordCounter(tag.value);
-  if (words < 2 || words > 2) {
+  if (words == 2) {
     tag.setCustomValidity("НЕТ");
   }
 }
