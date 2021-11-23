@@ -105,9 +105,7 @@
               <div class="menu__image-wrapper">
                 <img src="img/logo.jpg" alt="" class="menu__image" />
               </div>
-              <a class="menu__link site-header__link" href="test.html"
-                >Тест по дисциплине</a
-              >
+              <a class="menu__link site-header__link" href="test.html">Тест</a>
             </li>
           </ul>
         </nav>
@@ -150,6 +148,60 @@
                       maxlength="11"
                       pattern="+[0-9]{1}[0-9]{3}[0-9]{3}[0-9]{4}"
                     />
+                    <div
+                      class="calendar__title dropdown-btn"
+                      onclick="showCalendar()"
+                    >
+                      Календарь
+                    </div>
+                    <div
+                      class="
+                        site-main__content
+                        contact-form__field
+                        dropdown-content
+                      "
+                      id="calendar-dropdown"
+                    >
+                      <div class="contact-form__field">
+                        <label for="month">Месяц </label>
+                        <select name="month" id="calendar__month"></select>
+                        <label for="year">Год</label>
+                        <select name="year" id="calendar__year"></select>
+                      </div>
+                      <div class="dropdown-content calendar">
+                        <span class="calendar__element">1</span>
+                        <span class="calendar__element">2</span>
+                        <span class="calendar__element">3</span>
+                        <span class="calendar__element">4</span>
+                        <span class="calendar__element">5</span>
+                        <span class="calendar__element">6</span>
+                        <span class="calendar__element">7</span>
+                        <span class="calendar__element">8</span>
+                        <span class="calendar__element">9</span>
+                        <span class="calendar__element">11</span>
+                        <span class="calendar__element">12</span>
+                        <span class="calendar__element">13</span>
+                        <span class="calendar__element">14</span>
+                        <span class="calendar__element">15</span>
+                        <span class="calendar__element">16</span>
+                        <span class="calendar__element">17</span>
+                        <span class="calendar__element">18</span>
+                        <span class="calendar__element">19</span>
+                        <span class="calendar__element">20</span>
+                        <span class="calendar__element">21</span>
+                        <span class="calendar__element">22</span>
+                        <span class="calendar__element">22</span>
+                        <span class="calendar__element">23</span>
+                        <span class="calendar__element">24</span>
+                        <span class="calendar__element">25</span>
+                        <span class="calendar__element">26</span>
+                        <span class="calendar__element">27</span>
+                        <span class="calendar__element">28</span>
+                        <span class="calendar__element">29</span>
+                        <span class="calendar__element">30</span>
+                        <span class="calendar__element">31</span>
+                      </div>
+                    </div>
                     <div class="contact-form__field">
                       <p>Выберите пол:</p>
                       <input

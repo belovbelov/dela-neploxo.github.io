@@ -9,20 +9,86 @@ const week = {
   6: "Суббота",
   0: "Воскресение",
 };
+const months = [
+  "Январь",
+  "Февраль",
+  "Март",
+  "Апрель",
+  "Май",
+  "Июнь",
+  "Июль",
+  "Август",
+  "Сентябрь",
+  "Октябрь",
+  "Ноябрь",
+  "Декабрь",
+];
 
 let intervalId = setInterval(() => getTime(), 1000);
-
-onclick = function (event) {
-  if (!event.target.matches(".dropdown-btn")) {
-    let dropdowns = document.getElementsByClassName("dropdown-content");
-    for (let i = 0; i < dropdowns.length; i++) {
-      let openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains("show")) {
-        openDropdown.classList.remove("show");
-      }
-    }
-  }
+window.onload = () => {
+  startCalendar();
 };
+
+// onclick = function (event) {
+//   if (!event.target.matches(".dropdown-btn")) {
+//     let dropdowns = document.getElementsByClassName("dropdown-content");
+//     for (let i = 0; i < dropdowns.length; i++) {
+//       let openDropdown = dropdowns[i];
+//       if (openDropdown.classList.contains("show")) {
+//         openDropdown.classList.remove("show");
+//       }
+//     }
+//   }
+// };
+
+function startCalendar() {
+  const calendarDays = document.getElementsByClassName("calendar__element");
+  for (const day of calendarDays) {
+    day.addEventListener("click", () => {
+      for (const element of calendarDays) {
+        element.classList.remove("chosen");
+      }
+      day.classList.add("chosen");
+    });
+  }
+  const calendarMonths = document.getElementById("calendar__month");
+  for (let i = 0; i < months.length; i++) {
+    let option = document.createElement("option");
+    option.value = months[i];
+    option.textContent = months[i];
+    calendarMonths.appendChild(option);
+  }
+
+  const calendarYears = document.getElementById("calendar__year");
+  for (let i = 2021; i > 1970; i--) {
+    let option = document.createElement("option");
+    option.value = i;
+    option.textContent = i;
+    calendarYears.appendChild(option);
+  }
+}
+
+function openPhoto() {
+  const img__content = document.querySelectorAll(".content__image"),
+    photo__open = document.querySelector(".big-image"),
+    photo__background = document.querySelector(".image-background");
+
+  img__content.forEach((img, i) => {
+    img.addEventListener("click", () => {
+      photo__open.style.display = "block";
+      photo__background.style.display = "block";
+      photo__open.innerHTML = "";
+      let context = `
+        <img title ="Photo# ${i}" src="img/1.jpg"}">`;
+      photo__open.insertAdjacentHTML("beforeend", context);
+    });
+  });
+
+  photo__background.addEventListener("click", () => {
+    photo__open.style.display = "none";
+    photo__background.style.display = "none";
+  });
+}
 
 function showImages() {
   for (let i = 0; i < photos.length; i++) {
@@ -74,18 +140,19 @@ function wordCounter(text) {
 }
 
 function validateTest(tag) {
-  let words = wordCounter(tag.value);
-  if (words < 30) {
-    tag.setCustomValidity("НЕТ");
+  const words = wordCounter(tag.value);
+  const remaining = 30 - words;
+  if (tag.value == "" || words < 30) {
+    tag.setCustomValidity(`Введите еще ${remaining} слов`);
   } else {
     tag.setCustomValidity("");
   }
 }
 
 function validateName(tag) {
-  let words = wordCounter(tag.value);
-  if (words < 2 || words > 2) {
-    tag.setCustomValidity("НЕТ");
+  const words = wordCounter(tag.value);
+  if (words === 3) {
+    tag.setCustomValidity("Введите ФИО");
   } else {
     tag.setCustomValidity("");
   }
@@ -103,6 +170,10 @@ function onMouseOutImage(tag) {
 
 function showDropdown() {
   document.getElementById("hobbies-dropdown").classList.toggle("show");
+}
+
+function showCalendar() {
+  document.getElementById("calendar-dropdown").classList.toggle("show");
 }
 
 function getTime() {

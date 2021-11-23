@@ -8,7 +8,9 @@
     <script type="text/javascript" src="js/script.js"></script>
     <title>Belov - Album</title>
   </head>
-  <body onload="showImages()">
+  <body onload="showImages(); openPhoto()">
+    <div class="big-image"></div>
+    <div class="image-background"></div>
     <div class="container">
       <header class="site-header">
         <nav class="site-header__navbar">
@@ -105,9 +107,7 @@
               <div class="menu__image-wrapper">
                 <img src="img/logo.jpg" alt="" class="menu__image" />
               </div>
-              <a class="menu__link site-header__link" href="test.html"
-                >Тест по дисциплине</a
-              >
+              <a class="menu__link site-header__link" href="test.html">Тест</a>
             </li>
           </ul>
         </nav>

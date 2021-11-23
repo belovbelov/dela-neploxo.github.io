@@ -105,9 +105,7 @@
               <div class="menu__image-wrapper">
                 <img src="img/logo.jpg" alt="" class="menu__image" />
               </div>
-              <a class="menu__link site-header__link" href="test.html"
-                >Тест по дисциплине</a
-              >
+              <a class="menu__link site-header__link" href="test.html">Тест</a>
             </li>
           </ul>
         </nav>
@@ -135,6 +133,7 @@
                       rows="2"
                       placeholder="Ваш ответ *"
                       onchange="validateTest(this)"
+                      required
                     ></textarea>
                   </li>
                   <li class="menu__item">
@@ -145,11 +144,29 @@
                       perspiciatis doloribus error tenetur numquam nesciunt
                       delectus alias.
                     </p>
-                    <input type="radio" id="awnser1" name="age" value="30" />
+                    <input
+                      type="radio"
+                      id="awnser1"
+                      name="age"
+                      value="30"
+                      required
+                    />
                     <label for="awnser1">0 - 30</label><br />
-                    <input type="radio" id="awnser2" name="age" value="60" />
+                    <input
+                      type="radio"
+                      id="awnser2"
+                      name="age"
+                      value="60"
+                      required
+                    />
                     <label for="awnser2">31 - 60</label><br />
-                    <input type="radio" id="awnser3" name="age" value="100" />
+                    <input
+                      type="radio"
+                      id="awnser3"
+                      name="age"
+                      value="100"
+                      required
+                    />
                     <label for="awnser3">61 - 100</label>
                   </li>
                   <li class="menu__item">
@@ -160,7 +177,7 @@
                       perspiciatis doloribus error tenetur numquam nesciunt
                       delectus alias.
                     </p>
-                    <select name="" id="">
+                    <select name="" id="" required>
                       <option value="">123</option>
                       <option value="">222</option>
                     </select>
