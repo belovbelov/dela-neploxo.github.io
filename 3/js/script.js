@@ -1,14 +1,14 @@
 const photos = Array(15).fill("img/1.jpg");
 const titles = Array(15).fill("Photo");
-const week = {
-  1: "Понедельник",
-  2: "Вторник",
-  3: "Среда",
-  4: "Четверг",
-  5: "Пятница",
-  6: "Суббота",
-  0: "Воскресение",
-};
+const week = [
+  "Воскресение",
+  "Понедельник",
+  "Вторник",
+  "Среда",
+  "Четверг",
+  "Пятница",
+  "Суббота",
+];
 const months = [
   "Январь",
   "Февраль",
@@ -23,23 +23,37 @@ const months = [
   "Ноябрь",
   "Декабрь",
 ];
+const pageVisitsCount = {};
 
-let intervalId = setInterval(() => getTime(), 1000);
 window.onload = () => {
-  startCalendar();
-};
+  const submitBtn = document.getElementsByClassName("submit")[0];
+  try {
+    showImages();
+    openImage();
+  } catch (error) {
+    console.log(error);
+  }
+  try {
+    startCalendar();
+  } catch (error) {
+    console.log(error);
+  }
+  if (document.title.slice(-7) == "Hobbies") {
+    showHobbies();
+  }
 
-// onclick = function (event) {
-//   if (!event.target.matches(".dropdown-btn")) {
-//     let dropdowns = document.getElementsByClassName("dropdown-content");
-//     for (let i = 0; i < dropdowns.length; i++) {
-//       let openDropdown = dropdowns[i];
-//       if (openDropdown.classList.contains("show")) {
-//         openDropdown.classList.remove("show");
-//       }
-//     }
-//   }
-// };
+  let intervalId = setInterval(getTime, 1000);
+  appendPageVisitsCount();
+
+  document.getElementById("name").addEventListener("change", () => {
+    validateName(document.getElementById("name"));
+    submitBtn.click();
+  });
+
+  document.getElementById("email").addEventListener("change", () => {
+    submitBtn.click();
+  });
+};
 
 function startCalendar() {
   const calendarDays = document.getElementsByClassName("calendar__element");
@@ -68,25 +82,25 @@ function startCalendar() {
   }
 }
 
-function openPhoto() {
-  const img__content = document.querySelectorAll(".content__image"),
-    photo__open = document.querySelector(".big-image"),
-    photo__background = document.querySelector(".image-background");
+function openImage() {
+  const img__content = document.querySelectorAll(".content__image");
+  const img__open = document.querySelector(".big-image");
+  const img__background = document.querySelector(".image-background");
 
   img__content.forEach((img, i) => {
     img.addEventListener("click", () => {
-      photo__open.style.display = "block";
-      photo__background.style.display = "block";
-      photo__open.innerHTML = "";
+      img__open.style.display = "block";
+      img__background.style.display = "block";
+      img__open.innerHTML = "";
       let context = `
         <img title ="Photo# ${i}" src="img/1.jpg"}">`;
-      photo__open.insertAdjacentHTML("beforeend", context);
+      img__open.insertAdjacentHTML("beforeend", context);
     });
   });
 
-  photo__background.addEventListener("click", () => {
-    photo__open.style.display = "none";
-    photo__background.style.display = "none";
+  img__background.addEventListener("click", () => {
+    img__open.style.display = "none";
+    img__background.style.display = "none";
   });
 }
 
@@ -151,10 +165,12 @@ function validateTest(tag) {
 
 function validateName(tag) {
   const words = wordCounter(tag.value);
-  if (words === 3) {
+  if (words !== 3) {
     tag.setCustomValidity("Введите ФИО");
+    tag.style.borderColor = "#ff0026";
   } else {
     tag.setCustomValidity("");
+    tag.style.borderColor = "#000";
   }
 }
 
@@ -178,10 +194,30 @@ function showCalendar() {
 
 function getTime() {
   let today = new Date();
-  let date = today.getFullYear().toString();
-  date = today.getMonth() + 1 + "." + date.slice(-2);
-  let time = today.getHours().toString();
-  let dateTime = time + "." + date.toString() + " " + week[today.getDay()];
-  let text = document.getElementById("time");
-  text.textContent = dateTime;
+  let dateTime = `${today.getDate()}.${
+    today.getMonth() + 1
+  }.${today.getFullYear()} ${week[today.getDay()]}`;
+  let time = document.getElementById("time");
+  time.textContent = dateTime;
 }
+
+function appendPageVisitsCount() {
+  const title = document.title.slice(7);
+  localStorage[title] = Number(localStorage[title]) + 1 || 0;
+  console.log(localStorage[title]);
+  console.log(title);
+}
+
+function getCookies() {
+  const contentBody = document.getElementsByClassName("content__body")[0];
+  for (let i = 0; i < localStorage.length; i++) {
+    const historyData = `${localStorage.key(i)}: ${
+      localStorage[localStorage.key(i)]
+    }`;
+    contentBody.append(historyData);
+  }
+}
+
+// setCookies(name, value, expirationDays){
+
+// }
