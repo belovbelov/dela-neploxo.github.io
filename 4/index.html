@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="js/script.js"></script>
+    <title>Belov - Index</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="site-header">
+        <nav class="site-header__navbar">
+          <div class="site-header__logo">
+            <img src="img/logo.jpg" alt="" class="navbar__logo" />
+          </div>
+          <ul class="menu site-header__menu">
+            <li
+              class="menu__item"
+              onmouseover="onMouseOverImage(this)"
+              onmouseout="onMouseOutImage(this)"
+            >
+              <div class="menu__image-wrapper">
+                <img src="img/logo.jpg" alt="" class="menu__image" />
+              </div>
+              <a class="menu__link site-header__link" href="index.html"
+                >Главная</a
+              >
+            </li>
+            <li
+              class="menu__item"
+              onmouseover="onMouseOverImage(this)"
+              onmouseout="onMouseOutImage(this)"
+            >
+              <div class="menu__image-wrapper">
+                <img src="img/logo.jpg" alt="" class="menu__image" />
+              </div>
+              <a class="menu__link site-header__link" href="about.html"
+                >Обо мне</a
+              >
+            </li>
+            <li
+              class="menu__item"
+              onmouseover="onMouseOverImage(this)"
+              onmouseout="onMouseOutImage(this)"
+              onclick="showDropdown()"
+              class="dropdown"
+            >
+              <div class="menu__image-wrapper dropdown">
+                <img src="img/logo.jpg" alt="" class="menu__image" />
+              </div>
+              <a class="menu__link site-header__link dropdown-btn"
+                >Мои интересы</a
+              >
+              <ul id="hobbies-dropdown" class="dropdown-content">
+                <li><a href="interests.html#hobbies">Хобби</a></li>
+                <li><a href="interests.html#lang">Языки</a></li>
+                <li><a href="interests.html#frameworks">Фреймфорки</a></li>
+                <li><a href="interests.html#movies">Фильмы</a></li>
+                <li><a href="interests.html#jokes">Анекдоты</a></li>
+              </ul>
+            </li>
+            <li
+              class="menu__item"
+              onmouseover="onMouseOverImage(this)"
+              onmouseout="onMouseOutImage(this)"
+            >
+              <div class="menu__image-wrapper">
+                <img src="img/logo.jpg" alt="" class="menu__image" />
+              </div>
+              <a class="menu__link site-header__link" href="study.html"
+                >Учеба</a
+              >
+            </li>
+            <li
+              class="menu__item"
+              onmouseover="onMouseOverImage(this)"
+              onmouseout="onMouseOutImage(this)"
+            >
+              <div class="menu__image-wrapper">
+                <img src="img/logo.jpg" alt="" class="menu__image" />
+              </div>
+              <a class="menu__link site-header__link" href="photos.html"
+                >Фото альбом</a
+              >
+            </li>
+            <li
+              class="menu__item"
+              onmouseover="onMouseOverImage(this)"
+              onmouseout="onMouseOutImage(this)"
+            >
+              <div class="menu__image-wrapper">
+                <img src="img/logo.jpg" alt="" class="menu__image" />
+              </div>
+              <a class="menu__link site-header__link" href="contact.html"
+                >Контакты</a
+              >
+            </li>
+            <li
+              class="menu__item"
+              onmouseover="onMouseOverImage(this)"
+              onmouseout="onMouseOutImage(this)"
+            >
+              <div class="menu__image-wrapper">
+                <img src="img/logo.jpg" alt="" class="menu__image" />
+              </div>
+              <a class="menu__link site-header__link" href="test.html">Тест</a>
+            </li>
+          </ul>
+        </nav>
+        <div id="time"></div>
+      </header>
+      <main class="site-main">
+        <div class="site-main__content-wrapper">
+          <article class="site-main__content">
+            <h1 class="content__header">Белов Антон Витальевич</h1>
+            <div class="content__body">
+              <p>ИС-19-2</p>
+              <p>Лаба #1</p>
+            </div>
+            <img class="content__image" src="img/bioraphy image.jpg" />
+          </article>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
