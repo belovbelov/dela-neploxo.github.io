@@ -24,6 +24,37 @@ const months = [
   "Декабрь",
 ];
 const pageVisitsCount = {};
+
+window.onload = () => {
+  const submitBtn = document.getElementsByClassName("submit")[0];
+  // try {
+  //   showImages();
+  //   // openImage();
+  // } catch (error) {
+  //   console.log(error);
+  // }
+  try {
+    startCalendar();
+  } catch (error) {
+    console.log(error);
+  }
+  if (document.title.slice(-7) == "Hobbies") {
+    showHobbies();
+  }
+
+  let intervalId = setInterval(getTime, 1000);
+  appendPageVisitsCount();
+
+  document.getElementById("name").addEventListener("change", () => {
+    validateName(document.getElementById("name"));
+    submitBtn.click();
+  });
+
+  document.getElementById("email").addEventListener("change", () => {
+    submitBtn.click();
+  });
+};
+
 $(document).ready(function () {
   $("img[data-enlargeable]")
     .addClass("img-enlargeable")
@@ -89,36 +120,6 @@ $(document).ready(function () {
     $(".container").css("filter", "blur(0)");
   });
 });
-
-window.onload = () => {
-  const submitBtn = document.getElementsByClassName("submit")[0];
-  // try {
-  //   showImages();
-  //   // openImage();
-  // } catch (error) {
-  //   console.log(error);
-  // }
-  try {
-    startCalendar();
-  } catch (error) {
-    console.log(error);
-  }
-  if (document.title.slice(-7) == "Hobbies") {
-    showHobbies();
-  }
-
-  let intervalId = setInterval(getTime, 1000);
-  appendPageVisitsCount();
-
-  document.getElementById("name").addEventListener("change", () => {
-    validateName(document.getElementById("name"));
-    submitBtn.click();
-  });
-
-  document.getElementById("email").addEventListener("change", () => {
-    submitBtn.click();
-  });
-};
 
 function startCalendar() {
   const calendarDays = document.getElementsByClassName("calendar__element");
@@ -203,7 +204,6 @@ function showHobbies() {
     content.textContent = element["content"];
     hobbyCntainer.appendChild(header);
     hobbyCntainer.appendChild(content);
-    parent.appendChild(hobbyCntainer);
   });
 }
 
