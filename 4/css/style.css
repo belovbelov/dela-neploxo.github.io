@@ -260,7 +260,7 @@ table.center {
   right: 0;
   left: 0;
   margin: auto;
-  width: 140px;
+  width: 200px;
   font-family: var(--header-font-family);
 }
 
@@ -352,6 +352,24 @@ table.center {
   float: left;
   cursor: pointer;
   z-index: 100;
+}
+#name + .popover,
+.calendar__title + .popover {
+  margin: auto;
+  position: inherit;
+  display: none;
+  text-align: center;
+  align-items: center;
+  color: color(srgb 0.388 0.8 0.745);
+  font-weight: bold;
+  z-index: 100;
+  width: 200px;
+  height: 100px;
+  background: color(srgb 1 1 1 / 0.83);
+  right: 100px;
+  top: 230px;
+  border-radius: 2px;
+  box-shadow: 4px 4px 8px 1px rgba(34, 60, 80, 0.2);
 }
 
 @media only screen and (max-width: 1200px) {

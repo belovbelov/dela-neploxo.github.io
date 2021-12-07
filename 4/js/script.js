@@ -41,6 +41,7 @@ window.onload = () => {
   if (document.title.slice(-7) == "Hobbies") {
     showHobbies();
   }
+  popover();
 
   let intervalId = setInterval(getTime, 1000);
   appendPageVisitsCount();
@@ -147,7 +148,29 @@ function startCalendar() {
     calendarYears.appendChild(option);
   }
 }
+function popover() {
+  const fioPop = $("#name"),
+    datePop = $(".calendar__title");
+  console.log(fioPop);
 
+  fioPop.on("mouseover", () => {
+    $("#name").siblings(".popover").css("display", "flex");
+    console.log(1);
+  });
+  fioPop.on("mouseout", () => {
+    setTimeout(() => {
+      $("#name").siblings(".popover").css("display", "none");
+    }, 3000);
+  });
+  datePop.on("mouseover", () => {
+    $(".calendar__title").siblings(".popover").css("display", "flex");
+  });
+  datePop.on("mouseout", () => {
+    setTimeout(() => {
+      $(".calendar__title").siblings(".popover").css("display", "none");
+    }, 3000);
+  });
+}
 // function openImage() {
 //   const img__content = document.querySelectorAll(".content__image");
 //   const img__open = document.querySelector(".big-image");
