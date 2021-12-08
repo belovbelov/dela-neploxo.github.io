@@ -326,6 +326,24 @@ table.center {
   height: 100%;
 }
 
+.slider-inner {
+  position: relative;
+  float: left;
+  width: 600px;
+  height: 300px;
+  overflow: hidden;
+  padding: 3px;
+}
+
+.slider-inner img {
+  display: none;
+  width: 600px;
+  height: 300px;
+}
+.slider-inner img.active {
+  display: inline-block;
+}
+
 .prev,
 .next {
   max-height: 50px;

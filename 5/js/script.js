@@ -1,11 +1,4 @@
-const photos = [
-  "/img/1.jpg",
-  "/img/2.jpg",
-  "/img/3.jpg",
-  "/img/4.jpg",
-  "/img/5.jpg",
-  "/img/6.jpg",
-];
+const photos = Array(15).fill("img/1.jpg");
 const titles = Array(15).fill("Photo");
 const week = [
   "Воскресение",
@@ -34,12 +27,12 @@ const pageVisitsCount = {};
 
 window.onload = () => {
   const submitBtn = document.getElementsByClassName("submit")[0];
-  try {
-    showImages();
-    // openImage();
-  } catch (error) {
-    console.log(error);
-  }
+  // try {
+  //   showImages();
+  //   // openImage();
+  // } catch (error) {
+  //   console.log(error);
+  // }
   try {
     startCalendar();
   } catch (error) {
@@ -65,17 +58,16 @@ window.onload = () => {
 
 $(document).ready(function () {
   $("img[data-enlargeable]")
-    .addClass("img-enlargeable ")
+    .addClass("img-enlargeable")
     .click(function () {
       let src = $(this).attr("src");
       let modal;
 
       function removeModal() {
         modal.remove();
-        $("body").off("keyup");
+        $("body").off("keyup.modal-close");
       }
       modal = $("<div>")
-        .addClass("active")
         .css({
           background: "RGBA(0,0,0,.5) url(" + src + ") no-repeat center",
           backgroundSize: "contain",
@@ -87,53 +79,36 @@ $(document).ready(function () {
           left: "0",
           cursor: "zoom-out",
         })
-        .attr("path", src)
+        .click(function () {
+          removeModal();
+        })
         .appendTo(".image-gallery");
-      $(".active").append($("<span>", { class: "prev", text: "Previous" }));
-      $(".active").append($("<span>", { class: "next", text: "Next" }));
-      $(".active").append($("<span>", { class: "close", text: "Close" }));
-      $(".close").click(function () {
-        removeModal();
-      });
-      $(".image-gallery").on("keyup", function (e) {
-        if (e.keycode === 13) {
+      $(".image-gallery").on("keyup.modal-close", function (e) {
+        if (e.key === "Escape") {
           removeModal();
         }
       });
-      $(".next").on("click", function () {
-        let currentImage = $(".active");
-        currentPhotoInSlider = photos.indexOf(currentImage.attr("path"));
-        const newPhoto =
-          photos[
-            currentPhotoInSlider < photos.length - 1
-              ? ++currentPhotoInSlider
-              : 0
-          ];
-        currentImage.css(
-          "background",
-          `RGBA(0,0,0,.5) url("${newPhoto}") no-repeat center`
-        );
-        currentImage.attr("path", newPhoto);
-      });
-
-      $(".prev").on("click", function () {
-        let currentImage = $(".active");
-        currentPhotoInSlider = photos.indexOf(currentImage.attr("path"));
-        const newPhoto =
-          photos[
-            currentPhotoInSlider > 1
-              ? --currentPhotoInSlider
-              : photos.length - 1
-          ];
-        console.log(currentPhotoInSlider);
-        currentImage.css(
-          "background",
-          `RGBA(0,0,0,.5) url("${newPhoto}") no-repeat center`
-        );
-        currentImage.attr("path", photos[newPhoto]);
-      });
     });
 
+  $(".next").on("click", function () {
+    let currentImage = $(".active");
+    let nextIamge = currentImage.next();
+
+    if (nextIamge.length) {
+      currentImage.removeClass("active").css("z-index", -10);
+      nextIamge.addClass("active").css("z-index", 10);
+    }
+  });
+
+  $(".prev").on("click", function () {
+    let currentImage = $(".active");
+    let prevIamge = currentImage.prev();
+
+    if (prevIamge.length) {
+      currentImage.removeClass("active").css("z-index", -10);
+      prevIamge.addClass("active").css("z-index", 10);
+    }
+  });
   $("#dialog").dialog({
     height: "auto",
     width: 500,
@@ -180,6 +155,7 @@ function popover() {
 
   fioPop.on("mouseover", () => {
     $("#name").siblings(".popover").css("display", "flex");
+    console.log(1);
   });
   fioPop.on("mouseout", () => {
     setTimeout(() => {
@@ -195,44 +171,44 @@ function popover() {
     }, 3000);
   });
 }
-function openImage() {
-  const img__content = document.querySelectorAll(".content__image");
-  const img__open = document.querySelector(".big-image");
-  const img__background = document.querySelector(".image-background");
+// function openImage() {
+//   const img__content = document.querySelectorAll(".content__image");
+//   const img__open = document.querySelector(".big-image");
+//   const img__background = document.querySelector(".image-background");
 
-  img__content.forEach((img, i) => {
-    img.addEventListener("click", () => {
-      img__open.style.display = "block";
-      img__background.style.display = "block";
-      img__open.innerHTML = "";
-      let context = `
-        <img title ="Photo# ${i}" src="img/1.jpg"}">`;
-      img__open.insertAdjacentHTML("beforeend", context);
-    });
-  });
+//   img__content.forEach((img, i) => {
+//     img.addEventListener("click", () => {
+//       img__open.style.display = "block";
+//       img__background.style.display = "block";
+//       img__open.innerHTML = "";
+//       let context = `
+//         <img title ="Photo# ${i}" src="img/1.jpg"}">`;
+//       img__open.insertAdjacentHTML("beforeend", context);
+//     });
+//   });
 
-  img__background.addEventListener("click", () => {
-    img__open.style.display = "none";
-    img__background.style.display = "none";
-  });
-}
+//   img__background.addEventListener("click", () => {
+//     img__open.style.display = "none";
+//     img__background.style.display = "none";
+//   });
+// }
 
-function showImages() {
-  for (let i = 0; i < photos.length; i++) {
-    let div = document.createElement("div");
-    div.className = "col";
-    let image = document.createElement("img");
-    image.src = photos[i];
-    image.className = "content__image";
-    image.setAttribute("data-enlargeable", null);
-    let imageName = document.createElement("p");
-    imageName.textContent = titles[i] + " " + (i + 1).toString();
-    document
-      .getElementsByClassName("image-gallery")[0]
-      .appendChild(div)
-      .append(image, imageName);
-  }
-}
+// function showImages() {
+//   for (let i = 0; i < photos.length; i++) {
+//     let div = document.createElement("div");
+//     div.className = "col";
+//     let image = document.createElement("img");
+//     image.src = photos[i];
+//     image.className = "content__image";
+//     image.setAttribute("data-enlargeable", null);
+//     let imageName = document.createElement("p");
+//     imageName.textContent = titles[i] + " " + (i + 1).toString();
+//     document
+//       .getElementsByClassName("image-gallery")[0]
+//       .appendChild(div)
+//       .append(image, imageName);
+//   }
+// }
 
 function showHobbies() {
   let args = [

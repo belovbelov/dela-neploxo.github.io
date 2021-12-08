@@ -4,14 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <script type="text/javascript" src="js/jQuery.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
-    <title>Belov - Album</title>
+    <title>Belov - History</title>
   </head>
-  <body>
-    <div class="big-image"></div>
-    <div class="image-background"></div>
+  <body onload="getCookies()">
+    <div id="dialog" title="Attention!">
+      <p>On this page you cant watch counter of your page visits</p>
+    </div>
     <div class="container">
       <header class="site-header">
         <nav class="site-header__navbar">
@@ -117,71 +123,8 @@
       <main class="site-main">
         <div class="site-main__content-wrapper">
           <article class="site-main__content">
-            <h1 class="content__header">Мои фотографии</h1>
-            <div class="content__body">
-              <div class="image-gallery">
-                <!-- <div class="col">
-                  <img src="img/hdmPmBaE2yU.jpg" class="content__image" />
-                  <p>Photo</p>
-                </div>
-                <div class="col">
-                  <img src="img/1.jpg" alt="" class="content__image" />
-                  <p>Photo</p>
-                </div>
-                <div class="col">
-                  <img src="img/1.jpg" alt="" class="content__image" />
-                  <p>Photo</p>
-                </div>
-                <div class="col">
-                  <img src="img/1.jpg" alt="" class="content__image" />
-                  <p>Photo</p>
-                </div>
-                <div class="col">
-                  <img src="img/1.jpg" alt="" class="content__image" />
-                  <p>Photo</p>
-                </div>
-                <div class="col">
-                  <img src="img/1.jpg" alt="" class="content__image" />
-                  <p>Photo</p>
-                </div>
-                <div class="col">
-                  <img src="img/1.jpg" alt="" class="content__image" />
-                  <p>Photo</p>
-                </div>
-                <div class="col">
-                  <img src="img/1.jpg" alt="" class="content__image" />
-                  <p>Photo</p>
-                </div>
-                <div class="col">
-                  <img src="img/1.jpg" alt="" class="content__image" />
-                  <p>Photo</p>
-                </div>
-                <div class="col">
-                  <img src="img/1.jpg" alt="" class="content__image" />
-                  <p>Photo</p>
-                </div>
-                <div class="col">
-                  <img src="img/1.jpg" alt="" class="content__image" />
-                  <p>Photo</p>
-                </div>
-                <div class="col">
-                  <img src="img/1.jpg" alt="" class="content__image" />
-                  <p>Photo</p>
-                </div>
-                <div class="col">
-                  <img src="img/1.jpg" alt="" class="content__image" />
-                  <p>Photo</p>
-                </div>
-                <div class="col">
-                  <img src="img/1.jpg" alt="" class="content__image" />
-                  <p>Photo</p>
-                </div>
-                <div class="col">
-                  <img src="img/1.jpg" alt="" class="content__image" />
-                  <p>Photo</p>
-                </div> -->
-              </div>
-            </div>
+            <h1 class="content__header">История</h1>
+            <div class="content__body"></div>
           </article>
         </div>
       </main>
