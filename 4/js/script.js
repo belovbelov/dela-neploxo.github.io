@@ -121,7 +121,7 @@ $(document).ready(function () {
         currentPhotoInSlider = photos.indexOf(currentImage.attr("path"));
         const newPhoto =
           photos[
-            currentPhotoInSlider > 1
+            currentPhotoInSlider > 0
               ? --currentPhotoInSlider
               : photos.length - 1
           ];
@@ -130,7 +130,7 @@ $(document).ready(function () {
           "background",
           `RGBA(0,0,0,.5) url("${newPhoto}") no-repeat center`
         );
-        currentImage.attr("path", photos[newPhoto]);
+        currentImage.attr("path", newPhoto);
       });
     });
 
