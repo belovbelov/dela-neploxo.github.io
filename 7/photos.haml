@@ -6,6 +6,7 @@
     %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
     %link{:href => "css/style.css", :rel => "stylesheet"}/
+    %script{:src => "js/jQuery.js"}
     %script{:src => "js/script.js", :type => "text/javascript"}
     %title Belov - Education
   %body
@@ -17,7 +18,3 @@
             %h1.content__header Мои фотографии
             .content__body
               .image-gallery
-                -@photos.each do |v|
-                  %div.col
-                    %img.content__image.img-enlargeable{:src=> 'img/'+v,:data-enlargeable=>'null'}
-                      %p Photo #{@photos.index(v)+1}

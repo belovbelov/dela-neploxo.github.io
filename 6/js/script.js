@@ -35,7 +35,7 @@ const pageVisitsCount = {};
 window.onload = () => {
   const submitBtn = document.getElementsByClassName("submit")[0];
   try {
-    // showImages();
+    //showImages();
     // openImage();
   } catch (error) {
     console.log(error);
@@ -64,7 +64,7 @@ window.onload = () => {
 };
 
 $(document).ready(function () {
-  $("img[data-enlargeable]")
+  $("img[dataenlargeable]")
     .addClass("img-enlargeable ")
     .click(function () {
       let src = $(this).attr("src");
@@ -224,7 +224,7 @@ function showImages() {
     let image = document.createElement("img");
     image.src = photos[i];
     image.className = "content__image";
-    image.setAttribute("data-enlargeable", null);
+    image.setAttribute("dataenlargeable", null);
     let imageName = document.createElement("p");
     imageName.textContent = titles[i] + " " + (i + 1).toString();
     document
@@ -251,6 +251,7 @@ function showHobbies() {
     content.textContent = element["content"];
     hobbyCntainer.appendChild(header);
     hobbyCntainer.appendChild(content);
+    parent.append(hobbyCntainer);
   });
 }
 

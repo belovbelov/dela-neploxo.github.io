@@ -1,162 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta content="IE=edge" http-equiv="X-UA-Compatible">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<link href="css/style.css" rel="stylesheet">
-<script src="js/jQuery.js"></script>
-<script src="js/script.js" type="text/javascript"></script>
-<title>Belov - Contact</title>
-</head>
-<body>
-<div class="container">
-<header class='site-header'>
-<nav class='site-header__navbar'>
-<div class='site-header__logo'>
-<img alt='' class='navbar__logo' src='img/logo.jpg'>
-</div>
-<ul class='menu site-header__menu'>
-<li class='menu__item' onmouseout='onMouseOutImage(this)' onmouseover='onMouseOverImage(this)'>
-<div class='menu__image-wrapper'>
-<img alt='' class='menu__image' src='img/logo.jpg'>
-</div>
-<a class='menu__link site-header__link' href='index.html'>Главная</a>
-</li>
-<li class='menu__item' onmouseout='onMouseOutImage(this)' onmouseover='onMouseOverImage(this)'>
-<div class='menu__image-wrapper'>
-<img alt='' class='menu__image' src='img/logo.jpg'>
-</div>
-<a class='menu__link site-header__link' href='about.html'>Обо мне</a>
-</li>
-<li class='menu__item' onclick='showDropdown()' onmouseout='onMouseOutImage(this)' onmouseover='onMouseOverImage(this)'>
-<div class='menu__image-wrapper dropdown'>
-<img alt='' class='menu__image' src='img/logo.jpg'>
-</div>
-<a class='menu__link site-header__link dropdown-btn'>Мои интересы</a>
-<ul class='dropdown-content' id='hobbies-dropdown'>
-<li>
-<a href='interests.html#hobbies'>Хобби</a>
-</li>
-<li>
-<a href='interests.html#lang'>Языки</a>
-</li>
-<li>
-<a href='interests.html#frameworks'>Фреймфорки</a>
-</li>
-<li>
-<a href='interests.html#movies'>Фильмы</a>
-</li>
-<li>
-<a href='interests.html#jokes'>Анекдоты</a>
-</li>
-</ul>
-</li>
-<li class='menu__item' onmouseout='onMouseOutImage(this)' onmouseover='onMouseOverImage(this)'>
-<div class='menu__image-wrapper'>
-<img alt='' class='menu__image' src='img/logo.jpg'>
-</div>
-<a class='menu__link site-header__link' href='study.html'>Учеба</a>
-</li>
-<li class='menu__item' onmouseout='onMouseOutImage(this)' onmouseover='onMouseOverImage(this)'>
-<div class='menu__image-wrapper'>
-<img alt='' class='menu__image' src='img/logo.jpg'>
-</div>
-<a class='menu__link site-header__link' href='photos.html'>Фото альбом</a>
-</li>
-<li class='menu__item' onmouseout='onMouseOutImage(this)' onmouseover='onMouseOverImage(this)'>
-<div class='menu__image-wrapper'>
-<img alt='' class='menu__image' src='img/logo.jpg'>
-</div>
-<a class='menu__link site-header__link' href='contact.html'>Контакты</a>
-</li>
-<li class='menu__item' onmouseout='onMouseOutImage(this)' onmouseover='onMouseOverImage(this)'>
-<div class='menu__image-wrapper'>
-<img alt='' class='menu__image' src='img/logo.jpg'>
-</div>
-<a class='menu__link site-header__link' href='test.html'>Тест</a>
-</li>
-</ul>
-</nav>
-<div id='time'></div>
-</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="js/jQuery.js"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+    <title>Belov - Contact</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="site-header">
+        <nav class="site-header__navbar">
+          <div class="site-header__logo">
+            <img alt="" class="navbar__logo" src="img/logo.jpg" />
+          </div>
+          <ul class="menu site-header__menu">
+            <li
+              class="menu__item"
+              onmouseout="onMouseOutImage(this)"
+              onmouseover="onMouseOverImage(this)"
+            >
+              <div class="menu__image-wrapper">
+                <img alt="" class="menu__image" src="img/logo.jpg" />
+              </div>
+              <a class="menu__link site-header__link" href="index.html"
+                >Главная</a
+              >
+            </li>
+            <li
+              class="menu__item"
+              onmouseout="onMouseOutImage(this)"
+              onmouseover="onMouseOverImage(this)"
+            >
+              <div class="menu__image-wrapper">
+                <img alt="" class="menu__image" src="img/logo.jpg" />
+              </div>
+              <a class="menu__link site-header__link" href="about.html"
+                >Обо мне</a
+              >
+            </li>
+            <li
+              class="menu__item"
+              onclick="showDropdown()"
+              onmouseout="onMouseOutImage(this)"
+              onmouseover="onMouseOverImage(this)"
+            >
+              <div class="menu__image-wrapper dropdown">
+                <img alt="" class="menu__image" src="img/logo.jpg" />
+              </div>
+              <a class="menu__link site-header__link dropdown-btn"
+                >Мои интересы</a
+              >
+              <ul class="dropdown-content" id="hobbies-dropdown">
+                <li>
+                  <a href="interests.html#hobbies">Хобби</a>
+                </li>
+                <li>
+                  <a href="interests.html#lang">Языки</a>
+                </li>
+                <li>
+                  <a href="interests.html#frameworks">Фреймфорки</a>
+                </li>
+                <li>
+                  <a href="interests.html#movies">Фильмы</a>
+                </li>
+                <li>
+                  <a href="interests.html#jokes">Анекдоты</a>
+                </li>
+              </ul>
+            </li>
+            <li
+              class="menu__item"
+              onmouseout="onMouseOutImage(this)"
+              onmouseover="onMouseOverImage(this)"
+            >
+              <div class="menu__image-wrapper">
+                <img alt="" class="menu__image" src="img/logo.jpg" />
+              </div>
+              <a class="menu__link site-header__link" href="study.html"
+                >Учеба</a
+              >
+            </li>
+            <li
+              class="menu__item"
+              onmouseout="onMouseOutImage(this)"
+              onmouseover="onMouseOverImage(this)"
+            >
+              <div class="menu__image-wrapper">
+                <img alt="" class="menu__image" src="img/logo.jpg" />
+              </div>
+              <a class="menu__link site-header__link" href="photos.html"
+                >Фото альбом</a
+              >
+            </li>
+            <li
+              class="menu__item"
+              onmouseout="onMouseOutImage(this)"
+              onmouseover="onMouseOverImage(this)"
+            >
+              <div class="menu__image-wrapper">
+                <img alt="" class="menu__image" src="img/logo.jpg" />
+              </div>
+              <a class="menu__link site-header__link" href="contact.html"
+                >Контакты</a
+              >
+            </li>
+            <li
+              class="menu__item"
+              onmouseout="onMouseOutImage(this)"
+              onmouseover="onMouseOverImage(this)"
+            >
+              <div class="menu__image-wrapper">
+                <img alt="" class="menu__image" src="img/logo.jpg" />
+              </div>
+              <a class="menu__link site-header__link" href="test.html">Тест</a>
+            </li>
+          </ul>
+        </nav>
+        <div id="time"></div>
+      </header>
 
-<main class="site-main">
-<div class="site-main__content-wrapper">
-<article class="site-main__content">
-<h1 class="content__header">Напишите мне на почту</h1>
-<div class="content__body">
-<div class="contact-form">
-<div class="container contact-form__wrapper">
-<form action="mailto:itoha32@gmail.com" class="contact-form__form" method="POST">
-<input class="contact-form__field" id="name" placeholder="Имя и Фамилия*" required="" type="text">
-<div class="popover">Введите ваше ФИО полностью</div>
-<input class="contact-form__field" id="email" placeholder="Электронная почта *" required="" type="email">
-<input class="contact-form__field" id="phone" maxlength="11" minlength="9" pattern="+[0-9]{1}[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="8 888 888 8888" required="" type="tel">
-<div class="calendar__title dropdown-btn" onclick="showCalendar()">
-Календарь
-</div>
-<div class="popover">Выберите дату рождения</div>
-<div class="site-main__content contact-form__field dropdown-content" id="calendar-dropdown">
-<div class="contact-form__field">
-<label for="month">Месяц</label>
-<select id="calendar__month" name="month"></select>
-<label for="year">Год</label>
-<select id="calendar__year" name="year"></select>
-</div>
-<div class="dropdown-content calendar">
-<span class="calendar__element">1</span>
-<span class="calendar__element">2</span>
-<span class="calendar__element">3</span>
-<span class="calendar__element">4</span>
-<span class="calendar__element">5</span>
-<span class="calendar__element">6</span>
-<span class="calendar__element">7</span>
-<span class="calendar__element">8</span>
-<span class="calendar__element">9</span>
-<span class="calendar__element">10</span>
-<span class="calendar__element">11</span>
-<span class="calendar__element">12</span>
-<span class="calendar__element">13</span>
-<span class="calendar__element">14</span>
-<span class="calendar__element">15</span>
-<span class="calendar__element">16</span>
-<span class="calendar__element">17</span>
-<span class="calendar__element">18</span>
-<span class="calendar__element">19</span>
-<span class="calendar__element">20</span>
-<span class="calendar__element">21</span>
-<span class="calendar__element">22</span>
-<span class="calendar__element">23</span>
-<span class="calendar__element">24</span>
-<span class="calendar__element">25</span>
-<span class="calendar__element">26</span>
-<span class="calendar__element">27</span>
-<span class="calendar__element">28</span>
-<span class="calendar__element">29</span>
-<span class="calendar__element">30</span>
-<span class="calendar__element">31</span>
-</div>
-</div>
-<div class="contact-form__field">
-<p>Выберите пол:</p>
-<input id="male_gender" name="gender" required="" type="radio">
-<label for="male_gender">Мужской</label>
-<input id="female_gender" name="gender" required="" type="radio">
-<label for="female_gender">Женский</label>
-</div>
-<textarea class="contact-form__field" cols="30" id="" name="message" placeholder="Ваше сообщение *" required="" rows="5"></textarea>
-<div class="contact-form__buttons">
-<input class="submit" required="" type="submit" value="Отправить">
-<input class="submit" required="" type="reset" value="Сбросить">
-</div>
-</form>
-</div>
-</div>
-</div>
-</article>
-</div>
-</main>
-</div>
-</body>
+      <main class="site-main">
+        <div class="site-main__content-wrapper">
+          <article class="site-main__content">
+            <h1 class="content__header">Напишите мне на почту</h1>
+            <div class="content__body">
+              <div class="contact-form">
+                <div class="container contact-form__wrapper">
+                  <form
+                    action="mailto:itoha32@gmail.com"
+                    class="contact-form__form"
+                    method="POST"
+                  >
+                    <input
+                      class="contact-form__field"
+                      id="name"
+                      placeholder="Имя и Фамилия*"
+                      required=""
+                      type="text"
+                    />
+                    <div class="popover">Введите ваше ФИО полностью</div>
+                    <input
+                      class="contact-form__field"
+                      id="email"
+                      placeholder="Электронная почта *"
+                      required=""
+                      type="email"
+                    />
+                    <input
+                      class="contact-form__field"
+                      id="phone"
+                      maxlength="11"
+                      minlength="9"
+                      pattern="+[0-9]{1}[0-9]{3}[0-9]{3}[0-9]{4}"
+                      placeholder="8 888 888 8888"
+                      required=""
+                      type="tel"
+                    />
+                    <div
+                      class="calendar__title dropdown-btn"
+                      onclick="showCalendar()"
+                    >
+                      Календарь
+                    </div>
+                    <div class="popover">Выберите дату рождения</div>
+                    <div
+                      class="
+                        site-main__content
+                        contact-form__field
+                        dropdown-content
+                      "
+                      id="calendar-dropdown"
+                    >
+                      <div class="contact-form__field">
+                        <label for="month">Месяц</label>
+                        <select id="calendar__month" name="month"></select>
+                        <label for="year">Год</label>
+                        <select id="calendar__year" name="year"></select>
+                      </div>
+                      <div class="dropdown-content calendar">
+                        <span class="calendar__element">1</span>
+                        <span class="calendar__element">2</span>
+                        <span class="calendar__element">3</span>
+                        <span class="calendar__element">4</span>
+                        <span class="calendar__element">5</span>
+                        <span class="calendar__element">6</span>
+                        <span class="calendar__element">7</span>
+                        <span class="calendar__element">8</span>
+                        <span class="calendar__element">9</span>
+                        <span class="calendar__element">10</span>
+                        <span class="calendar__element">11</span>
+                        <span class="calendar__element">12</span>
+                        <span class="calendar__element">13</span>
+                        <span class="calendar__element">14</span>
+                        <span class="calendar__element">15</span>
+                        <span class="calendar__element">16</span>
+                        <span class="calendar__element">17</span>
+                        <span class="calendar__element">18</span>
+                        <span class="calendar__element">19</span>
+                        <span class="calendar__element">20</span>
+                        <span class="calendar__element">21</span>
+                        <span class="calendar__element">22</span>
+                        <span class="calendar__element">23</span>
+                        <span class="calendar__element">24</span>
+                        <span class="calendar__element">25</span>
+                        <span class="calendar__element">26</span>
+                        <span class="calendar__element">27</span>
+                        <span class="calendar__element">28</span>
+                        <span class="calendar__element">29</span>
+                        <span class="calendar__element">30</span>
+                        <span class="calendar__element">31</span>
+                      </div>
+                    </div>
+                    <div class="contact-form__field">
+                      <p>Выберите пол:</p>
+                      <input
+                        id="male_gender"
+                        name="gender"
+                        required=""
+                        type="radio"
+                      />
+                      <label for="male_gender">Мужской</label>
+                      <input
+                        id="female_gender"
+                        name="gender"
+                        required=""
+                        type="radio"
+                      />
+                      <label for="female_gender">Женский</label>
+                    </div>
+                    <textarea
+                      class="contact-form__field"
+                      cols="30"
+                      id=""
+                      name="message"
+                      placeholder="Ваше сообщение *"
+                      required=""
+                      rows="5"
+                    ></textarea>
+                    <div class="contact-form__buttons">
+                      <input
+                        class="submit"
+                        required=""
+                        type="submit"
+                        value="Отправить"
+                      />
+                      <input
+                        class="submit"
+                        required=""
+                        type="reset"
+                        value="Сбросить"
+                      />
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </main>
+    </div>
+  </body>
 </html>

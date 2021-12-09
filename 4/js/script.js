@@ -251,6 +251,7 @@ function showHobbies() {
     content.textContent = element["content"];
     hobbyCntainer.appendChild(header);
     hobbyCntainer.appendChild(content);
+    parent.append(hobbyCntainer);
   });
 }
 
