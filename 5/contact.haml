@@ -1,0 +1,47 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "UTF-8"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %link{:href => "css/style.css", :rel => "stylesheet"}/
+    %script{:src => "js/jQuery.js"}
+    %script{:src => "js/script.js", :type => "text/javascript"}
+    %title Belov - Contact
+  %body
+    .container
+      = Haml::Engine.new(File.read('./includes/_header.haml')).render
+      %main.site-main
+        .site-main__content-wrapper
+          %article.site-main__content
+            %h1.content__header Напишите мне на почту
+            .content__body
+              .contact-form
+                .container.contact-form__wrapper
+                  %form.contact-form__form{:action => "mailto:itoha32@gmail.com", :method => "POST"}
+                    %input#name.contact-form__field{:placeholder => "Имя и Фамилия*", :required => "", :type => "text"}/
+                    .popover Введите ваше ФИО полностью
+                    %input#email.contact-form__field{:placeholder => "Электронная почта *", :required => "", :type => "email"}/
+                    %input#phone.contact-form__field{:maxlength => "11", :minlength => "9", :pattern => "+[0-9]{1}[0-9]{3}[0-9]{3}[0-9]{4}", :placeholder => "8 888 888 8888", :required => "", :type => "tel"}/
+                    .calendar__title.dropdown-btn{:onclick => "showCalendar()"}
+                      Календарь
+                    .popover Выберите дату рождения
+                    #calendar-dropdown.site-main__content.contact-form__field.dropdown-content
+                      .contact-form__field
+                        %label{:for => "month"} Месяц
+                        %select#calendar__month{:name => "month"}
+                        %label{:for => "year"} Год
+                        %select#calendar__year{:name => "year"}
+                      .dropdown-content.calendar
+                        - (1..31).each do |i|
+                          %span.calendar__element #{i}
+                    .contact-form__field
+                      %p Выберите пол:
+                      %input#male_gender{:name => "gender", :required => "", :type => "radio"}/
+                      %label{:for => "male_gender"} Мужской
+                      %input#female_gender{:name => "gender", :required => "", :type => "radio"}/
+                      %label{:for => "female_gender"} Женский
+                    %textarea.contact-form__field{:cols => "30", :id => "", :name => "message", :placeholder => "Ваше сообщение *", :required => "", :rows => "5"}
+                    .contact-form__buttons
+                      %input.submit{:required => "", :type => "submit", :value => "Отправить"}/
+                      %input.submit{:required => "", :type => "reset", :value => "Сбросить"}/

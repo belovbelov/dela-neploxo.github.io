@@ -1,10 +1,10 @@
 const photos = [
-  "/img/1.jpg",
-  "/img/2.jpg",
-  "/img/3.jpg",
-  "/img/4.jpg",
-  "/img/5.jpg",
-  "/img/6.jpg",
+  "img/1.jpg",
+  "img/2.jpg",
+  "img/3.jpg",
+  "img/4.jpg",
+  "img/5.jpg",
+  "img/6.jpg",
 ];
 const titles = Array(15).fill("Photo");
 const week = [
@@ -36,7 +36,7 @@ window.onload = () => {
   const submitBtn = document.getElementsByClassName("submit")[0];
   try {
     showImages();
-    // openImage();
+    //openImage();
   } catch (error) {
     console.log(error);
   }
