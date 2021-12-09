@@ -1,0 +1,45 @@
+%header.site-header
+  %nav.site-header__navbar
+    .site-header__logo
+      %img.navbar__logo{:alt => "", :src => "img/logo.jpg"}/
+    %ul.menu.site-header__menu
+      %li.menu__item{:onmouseout => "onMouseOutImage(this)", :onmouseover => "onMouseOverImage(this)"}
+        .menu__image-wrapper
+          %img.menu__image{:alt => "", :src => "img/logo.jpg"}/
+        %a.menu__link.site-header__link{:href => "index.html"} Главная
+      %li.menu__item{:onmouseout => "onMouseOutImage(this)", :onmouseover => "onMouseOverImage(this)"}
+        .menu__image-wrapper
+          %img.menu__image{:alt => "", :src => "img/logo.jpg"}/
+        %a.menu__link.site-header__link{:href => "about.html"} Обо мне
+      %li.menu__item{:onclick => "showDropdown()", :onmouseout => "onMouseOutImage(this)", :onmouseover => "onMouseOverImage(this)"}
+        .menu__image-wrapper.dropdown
+          %img.menu__image{:alt => "", :src => "img/logo.jpg"}/
+        %a.menu__link.site-header__link.dropdown-btn Мои интересы
+        %ul#hobbies-dropdown.dropdown-content
+          %li
+            %a{:href => "interests.html#hobbies"} Хобби
+          %li
+            %a{:href => "interests.html#lang"} Языки
+          %li
+            %a{:href => "interests.html#frameworks"} Фреймфорки
+          %li
+            %a{:href => "interests.html#movies"} Фильмы
+          %li
+            %a{:href => "interests.html#jokes"} Анекдоты
+      %li.menu__item{:onmouseout => "onMouseOutImage(this)", :onmouseover => "onMouseOverImage(this)"}
+        .menu__image-wrapper
+          %img.menu__image{:alt => "", :src => "img/logo.jpg"}/
+        %a.menu__link.site-header__link{:href => "study.html"} Учеба
+      %li.menu__item{:onmouseout => "onMouseOutImage(this)", :onmouseover => "onMouseOverImage(this)"}
+        .menu__image-wrapper
+          %img.menu__image{:alt => "", :src => "img/logo.jpg"}/
+        %a.menu__link.site-header__link{:href => "photos.html"} Фото альбом
+      %li.menu__item{:onmouseout => "onMouseOutImage(this)", :onmouseover => "onMouseOverImage(this)"}
+        .menu__image-wrapper
+          %img.menu__image{:alt => "", :src => "img/logo.jpg"}/
+        %a.menu__link.site-header__link{:href => "contact.html"} Контакты
+      %li.menu__item{:onmouseout => "onMouseOutImage(this)", :onmouseover => "onMouseOverImage(this)"}
+        .menu__image-wrapper
+          %img.menu__image{:alt => "", :src => "img/logo.jpg"}/
+        %a.menu__link.site-header__link{:href => "test.html"} Тест
+  #time

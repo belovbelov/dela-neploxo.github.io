@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="css/style.css" rel="stylesheet">
+<script src="js/script.js" type="text/javascript"></script>
+<title>Belov - Education</title>
+</head>
+<body>
+<div class="container">
+<header class='site-header'>
+<nav class='site-header__navbar'>
+<div class='site-header__logo'>
+<img alt='' class='navbar__logo' src='img/logo.jpg'>
+</div>
+<ul class='menu site-header__menu'>
+<li class='menu__item' onmouseout='onMouseOutImage(this)' onmouseover='onMouseOverImage(this)'>
+<div class='menu__image-wrapper'>
+<img alt='' class='menu__image' src='img/logo.jpg'>
+</div>
+<a class='menu__link site-header__link' href='index.html'>Главная</a>
+</li>
+<li class='menu__item' onmouseout='onMouseOutImage(this)' onmouseover='onMouseOverImage(this)'>
+<div class='menu__image-wrapper'>
+<img alt='' class='menu__image' src='img/logo.jpg'>
+</div>
+<a class='menu__link site-header__link' href='about.html'>Обо мне</a>
+</li>
+<li class='menu__item' onclick='showDropdown()' onmouseout='onMouseOutImage(this)' onmouseover='onMouseOverImage(this)'>
+<div class='menu__image-wrapper dropdown'>
+<img alt='' class='menu__image' src='img/logo.jpg'>
+</div>
+<a class='menu__link site-header__link dropdown-btn'>Мои интересы</a>
+<ul class='dropdown-content' id='hobbies-dropdown'>
+<li>
+<a href='interests.html#hobbies'>Хобби</a>
+</li>
+<li>
+<a href='interests.html#lang'>Языки</a>
+</li>
+<li>
+<a href='interests.html#frameworks'>Фреймфорки</a>
+</li>
+<li>
+<a href='interests.html#movies'>Фильмы</a>
+</li>
+<li>
+<a href='interests.html#jokes'>Анекдоты</a>
+</li>
+</ul>
+</li>
+<li class='menu__item' onmouseout='onMouseOutImage(this)' onmouseover='onMouseOverImage(this)'>
+<div class='menu__image-wrapper'>
+<img alt='' class='menu__image' src='img/logo.jpg'>
+</div>
+<a class='menu__link site-header__link' href='study.html'>Учеба</a>
+</li>
+<li class='menu__item' onmouseout='onMouseOutImage(this)' onmouseover='onMouseOverImage(this)'>
+<div class='menu__image-wrapper'>
+<img alt='' class='menu__image' src='img/logo.jpg'>
+</div>
+<a class='menu__link site-header__link' href='photos.html'>Фото альбом</a>
+</li>
+<li class='menu__item' onmouseout='onMouseOutImage(this)' onmouseover='onMouseOverImage(this)'>
+<div class='menu__image-wrapper'>
+<img alt='' class='menu__image' src='img/logo.jpg'>
+</div>
+<a class='menu__link site-header__link' href='contact.html'>Контакты</a>
+</li>
+<li class='menu__item' onmouseout='onMouseOutImage(this)' onmouseover='onMouseOverImage(this)'>
+<div class='menu__image-wrapper'>
+<img alt='' class='menu__image' src='img/logo.jpg'>
+</div>
+<a class='menu__link site-header__link' href='test.html'>Тест</a>
+</li>
+</ul>
+</nav>
+<div id='time'></div>
+</header>
+
+<main class="site-main">
+<div class="site-main__content-wrapper">
+<article class="site-main__content">
+<h1 class="content__header">Учеба</h1>
+<div class="content__body">
+<h2>Севастопольский Государственный Университет</h2>
+<h3>
+Институт информационных технологий и управления в технических
+системах
+</h3>
+</div>
+<table class="center">
+<tbody>
+<tr>
+<td colspan="100%">ПЛАН УЧЕБНОГО ПРОЦЕССА</td>
+</tr>
+<tr>
+<th rowspan="2">#</th>
+<th rowspan="2">Дисциплина</th>
+<th rowspan="2">Кафедра</th>
+<th colspan="6">Всего часов</th>
+</tr>
+<tr>
+<th>Всего</th>
+<th>Ауд</th>
+<th>Лк</th>
+<th>Лб</th>
+<th>Пр</th>
+<th>СРС</th>
+</tr>
+<tr>
+<th>1</th>
+<td>
+<i>Экология</i>
+</td>
+<td class="center-text">БЖ</td>
+<td>54</td>
+<td>27</td>
+<td>18</td>
+<td>0</td>
+<td>9</td>
+<td>27</td>
+</tr>
+<tr>
+<th>2</th>
+<td>Высшая математика</td>
+<td class="center-text">ВМ</td>
+<td>540</td>
+<td>282</td>
+<td>141</td>
+<td>0</td>
+<td>141</td>
+<td>258</td>
+</tr>
+<tr>
+<th>3</th>
+<td>Русский язык и культура речи</td>
+<td class="center-text">НГиГ</td>
+<td>108</td>
+<td>54</td>
+<td>18</td>
+<td>0</td>
+<td>36</td>
+<td>54</td>
+</tr>
+<tr>
+<th>4</th>
+<td>Основы дискретной математики</td>
+<td class="center-text">ИС</td>
+<td>216</td>
+<td>139</td>
+<td>87</td>
+<td>0</td>
+<td>52</td>
+<td>77</td>
+</tr>
+<tr>
+<th>5</th>
+<td>Основы программирования и алгоритмические языки</td>
+<td class="center-text">ИС</td>
+<td>405</td>
+<td>210</td>
+<td>105</td>
+<td>87</td>
+<td>18</td>
+<td>195</td>
+</tr>
+<tr>
+<th>6</th>
+<td>Основы экологии</td>
+<td class="center-text">ПЭОП</td>
+<td>54</td>
+<td>27</td>
+<td>18</td>
+<td>0</td>
+<td>9</td>
+<td>27</td>
+</tr>
+<tr>
+<th>7</th>
+<td>Теория вероятностей и математическая статистика</td>
+<td class="center-text">ИС</td>
+<td>162</td>
+<td>72</td>
+<td>54</td>
+<td>18</td>
+<td>0</td>
+<td>90</td>
+</tr>
+<tr>
+<th>8</th>
+<td>Физика</td>
+<td class="center-text">Физики</td>
+<td>324</td>
+<td>194</td>
+<td>106</td>
+<td>88</td>
+<td>0</td>
+<td>130</td>
+</tr>
+<tr>
+<th>9</th>
+<td>Основы электротехники и электроники</td>
+<td class="center-text">ИС</td>
+<td>108</td>
+<td>72</td>
+<td>36</td>
+<td>18</td>
+<td>18</td>
+<td>36</td>
+</tr>
+<tr>
+<th>10</th>
+<td>Численные методы в информатике</td>
+<td class="center-text">ИС</td>
+<td>189</td>
+<td>89</td>
+<td>36</td>
+<td>36</td>
+<td>17</td>
+<td>100</td>
+</tr>
+<tr>
+<th>11</th>
+<td>Методы исследования операций</td>
+<td class="center-text">ИС</td>
+<td>216</td>
+<td>104</td>
+<td>52</td>
+<td>35</td>
+<td>17</td>
+<td>112</td>
+</tr>
+</tbody>
+</table>
+</article>
+</div>
+</main>
+</div>
+</body>
+</html>

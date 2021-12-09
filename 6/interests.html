@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="js/script.js"></script>
+    <title>Belov - Hobbies</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="site-header">
+        <nav class="site-header__navbar">
+          <div class="site-header__logo">
+            <img src="img/logo.jpg" alt="" class="navbar__logo" />
+          </div>
+          <ul class="menu site-header__menu">
+            <li
+              class="menu__item"
+              onmouseover="onMouseOverImage(this)"
+              onmouseout="onMouseOutImage(this)"
+            >
+              <div class="menu__image-wrapper">
+                <img src="img/logo.jpg" alt="" class="menu__image" />
+              </div>
+              <a class="menu__link site-header__link" href="index.html"
+                >Главная</a
+              >
+            </li>
+            <li
+              class="menu__item"
+              onmouseover="onMouseOverImage(this)"
+              onmouseout="onMouseOutImage(this)"
+            >
+              <div class="menu__image-wrapper">
+                <img src="img/logo.jpg" alt="" class="menu__image" />
+              </div>
+              <a class="menu__link site-header__link" href="about.html"
+                >Обо мне</a
+              >
+            </li>
+            <li
+              class="menu__item"
+              onmouseover="onMouseOverImage(this)"
+              onmouseout="onMouseOutImage(this)"
+              onclick="showDropdown()"
+              class="dropdown"
+            >
+              <div class="menu__image-wrapper dropdown">
+                <img src="img/logo.jpg" alt="" class="menu__image" />
+              </div>
+              <a class="menu__link site-header__link dropdown-btn"
+                >Мои интересы</a
+              >
+              <ul id="hobbies-dropdown" class="dropdown-content">
+                <li><a href="interests.html#hobbies">Хобби</a></li>
+                <li><a href="interests.html#lang">Языки</a></li>
+                <li><a href="interests.html#frameworks">Фреймфорки</a></li>
+                <li><a href="interests.html#movies">Фильмы</a></li>
+                <li><a href="interests.html#jokes">Анекдоты</a></li>
+              </ul>
+            </li>
+            <li
+              class="menu__item"
+              onmouseover="onMouseOverImage(this)"
+              onmouseout="onMouseOutImage(this)"
+            >
+              <div class="menu__image-wrapper">
+                <img src="img/logo.jpg" alt="" class="menu__image" />
+              </div>
+              <a class="menu__link site-header__link" href="study.html"
+                >Учеба</a
+              >
+            </li>
+            <li
+              class="menu__item"
+              onmouseover="onMouseOverImage(this)"
+              onmouseout="onMouseOutImage(this)"
+            >
+              <div class="menu__image-wrapper">
+                <img src="img/logo.jpg" alt="" class="menu__image" />
+              </div>
+              <a class="menu__link site-header__link" href="photos.html"
+                >Фото альбом</a
+              >
+            </li>
+            <li
+              class="menu__item"
+              onmouseover="onMouseOverImage(this)"
+              onmouseout="onMouseOutImage(this)"
+            >
+              <div class="menu__image-wrapper">
+                <img src="img/logo.jpg" alt="" class="menu__image" />
+              </div>
+              <a class="menu__link site-header__link" href="contact.html"
+                >Контакты</a
+              >
+            </li>
+            <li
+              class="menu__item"
+              onmouseover="onMouseOverImage(this)"
+              onmouseout="onMouseOutImage(this)"
+            >
+              <div class="menu__image-wrapper">
+                <img src="img/logo.jpg" alt="" class="menu__image" />
+              </div>
+              <a class="menu__link site-header__link" href="test.html">Тест</a>
+            </li>
+          </ul>
+        </nav>
+        <div id="time"></div>
+      </header>
+      <main class="site-main">
+        <div class="site-main__content-wrapper">
+          <article class="site-main__content">
+            <h1 class="content__header">Мои интересы</h1>
+            <div class="content__body">
+              <img class="banner" src="img/hobby-money.png" alt="" />
+              <ul class="content__menu">
+                <li class="menu__item"><a href="#hobbies">Мои хобби</a></li>
+                <li class="menu__item">
+                  <a href="#lang">Мои любимые языки программирования</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#frameworks">Мои любимые фреймфорки</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#movies">Мои любимые фильмы</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#jokes">Мои любимые анекдоты</a>
+                </li>
+              </ul>
+              <div id="hobbies" class="content__body">
+                <h3 class="content__header">Мои Хобби</h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
+                eos voluptas officia enim quam magni atque voluptatibus quisquam
+                eum dolore, eveniet consequuntur dolorem sunt ratione amet neque
+                harum ipsam cumque?
+              </div>
+              <div id="lang" class="content__body">
+                <h3 class="content__header">
+                  Мои любимые языки программирования
+                </h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corporis, voluptatum numquam? Distinctio recusandae neque
+                aspernatur magnam totam quo ab ipsam id minus tempore reiciendis
+                error, fuga nisi facere repellendus aliquam?
+              </div>
+              <div id="frameworks" class="content__body">
+                <h3 class="content__header">Мои любимые фреймфорки</h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
+                sint laborum quos cum accusantium vel doloribus est sed aliquam
+                illum quam officia harum ut, molestias doloremque nulla debitis
+                delectus. Error?
+              </div>
+              <div id="movies" class="content__body">
+                <h3 class="content__header">Мои любимые фильмы</h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Deleniti modi reprehenderit, harum non reiciendis atque nesciunt
+                quod soluta numquam deserunt suscipit recusandae nulla maiores
+                quisquam minima aliquam unde in error.
+              </div>
+              <div id="jokes" class="content__body">
+                <h3 class="content__header">Мои любимые анекдоты</h3>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Commodi doloremque, laborum voluptatum nulla eligendi magnam.
+                Odit at dolorem exercitationem! Fuga neque praesentium itaque
+                cupiditate, hic ullam cumque at quasi dolores?
+              </div>
+            </div>
+          </article>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

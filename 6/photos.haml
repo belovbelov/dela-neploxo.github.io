@@ -1,0 +1,23 @@
+!!!
+-@photos = ['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg']
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "UTF-8"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %link{:href => "css/style.css", :rel => "stylesheet"}/
+    %script{:src => "js/script.js", :type => "text/javascript"}
+    %title Belov - Education
+  %body
+    .container
+      = Haml::Engine.new(File.read('./includes/_header.haml')).render
+      %main.site-main
+        .site-main__content-wrapper
+          %article.site-main__content
+            %h1.content__header Мои фотографии
+            .content__body
+              .image-gallery
+                -@photos.each do |v|
+                  %div.col
+                    %img.content__image.img-enlargeable{:src=> 'img/'+v,:data-enlargeable=>'null'}
+                      %p Photo #{@photos.index(v)+1}
